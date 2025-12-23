@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Stoned Youth';
+    src: url('StonedYouthRegular.eot');
+    src: local('Stoned Youth'), local('StonedYouthRegular'),
+        url('StonedYouthRegular.eot?#iefix') format('embedded-opentype'),
+        url('StonedYouthRegular.woff2') format('woff2'),
+        url('StonedYouthRegular.woff') format('woff'),
+        url('StonedYouthRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
