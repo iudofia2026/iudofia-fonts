@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Showcase</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Controls -->
+    <aside class="sidebar">
+      <h1>Font Showcase</h1>
+
+      <!-- Search -->
+      <div class="control-group">
+        <label>Search Fonts</label>
+        <input type="text" id="searchInput" placeholder="Type to filter...">
+      </div>
+
+      <!-- Font Selector -->
+      <div class="control-group">
+        <label for="fontSelect">Font Family</label>
+        <select id="fontSelect">
+          <option value="">Select a font...</option>
+        </select>
+      </div>
+
+      <!-- Size Slider -->
+      <div class="control-group">
+        <label for="sizeSlider">Size: <span id="sizeValue">48</span>px</label>
+        <input type="range" id="sizeSlider" min="12" max="120" value="48">
+      </div>
+
+      <!-- Weight Slider -->
+      <div class="control-group">
+        <label for="weightSlider">Weight: <span id="weightValue">400</span></label>
+        <input type="range" id="weightSlider" min="100" max="900" value="400" step="10">
+        <div class="weight-labels">
+          <span>Thin</span>
+          <span>Regular</span>
+          <span>Bold</span>
+          <span>Black</span>
+        </div>
+      </div>
+
+      <!-- Line Height Slider -->
+      <div class="control-group">
+        <label for="lineHeightSlider">Line Height: <span id="lineHeightValue">1.4</span></label>
+        <input type="range" id="lineHeightSlider" min="1" max="2.5" value="1.4" step="0.1">
+      </div>
+
+      <!-- Letter Spacing Slider -->
+      <div class="control-group">
+        <label for="letterSpacingSlider">Letter Spacing: <span id="letterSpacingValue">0</span>px</label>
+        <input type="range" id="letterSpacingSlider" min="-2" max="5" value="0" step="0.5">
+      </div>
+
+      <!-- Style Toggles -->
+      <div class="control-group">
+        <label>Style</label>
+        <div class="toggle-group">
+          <button id="italicBtn" class="toggle-btn" data-style="italic">
+            <i>I</i>
+          </button>
+          <button id="underlineBtn" class="toggle-btn" data-style="underline">
+            <u>U</u>
+          </button>
+        </div>
+      </div>
+
+      <!-- Variant Selector (for fonts with multiple variants) -->
+      <div class="control-group" id="variantGroup" style="display: none;">
+        <label for="variantSelect">Variant</label>
+        <select id="variantSelect"></select>
+      </div>
+
+      <!-- Sample Text Presets -->
+      <div class="control-group">
+        <label>Sample Text</label>
+        <div class="preset-buttons">
+          <button class="preset-btn" data-preset="alphabet">ABC</button>
+          <button class="preset-btn" data-preset="pangram">Pangram</button>
+          <button class="preset-btn" data-preset="numbers">123</button>
+          <button class="preset-btn" data-preset="sentence">Sentence</button>
+          <button class="preset-btn" data-preset="paragraph">Paragraph</button>
+          <button class="preset-btn" data-preset="code">Code</button>
+        </div>
+      </div>
+
+      <!-- View Toggle -->
+      <div class="control-group">
+        <label>View</label>
+        <div class="toggle-group">
+          <button id="singleViewBtn" class="toggle-btn active">Single</button>
+          <button id="gridViewBtn" class="toggle-btn">Grid All</button>
+        </div>
+      </div>
+
+      <!-- Dark Mode Toggle -->
+      <div class="control-group">
+        <label>Theme</label>
+        <div class="toggle-group">
+          <button id="lightModeBtn" class="toggle-btn">Light</button>
+          <button id="darkModeBtn" class="toggle-btn active">Dark</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Preview Area -->
+    <main class="main">
+      <!-- Single Font View -->
+      <div id="singleView" class="view active">
+        <div class="preview-header">
+          <h2 id="fontName">Select a font to preview</h2>
+          <span id="fontInfo"></span>
+        </div>
+        <textarea id="previewText" placeholder="Type your own text here...">The quick brown fox jumps over the lazy dog.</textarea>
+      </div>
+
+      <!-- Grid View -->
+      <div id="gridView" class="view">
+        <h2>All Fonts</h2>
+        <div id="fontGrid" class="font-grid"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

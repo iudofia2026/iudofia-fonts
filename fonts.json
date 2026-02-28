@@ -1,0 +1,400 @@
+{
+  "fonts": [
+    {
+      "family": "Apercu Mono",
+      "id": "apercu-mono",
+      "variants": [
+        {"file": "fonts/apercu-mono/ApercuMonoPro-Light.ttf", "weight": 300, "style": "normal"},
+        {"file": "fonts/apercu-mono/ApercuMonoPro-Regular.ttf", "weight": 400, "style": "normal"},
+        {"file": "fonts/apercu-mono/ApercuMonoPro-Medium.ttf", "weight": 500, "style": "normal"},
+        {"file": "fonts/apercu-mono/ApercuMonoPro-Bold.ttf", "weight": 700, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Author",
+      "id": "author",
+      "variants": [
+        {"file": "fonts/author/Author-Extralight.woff2", "weight": 200, "style": "normal"},
+        {"file": "fonts/author/Author-Light.woff2", "weight": 300, "style": "normal"},
+        {"file": "fonts/author/Author-Regular.woff2", "weight": 400, "style": "normal"},
+        {"file": "fonts/author/Author-Medium.woff2", "weight": 500, "style": "normal"},
+        {"file": "fonts/author/Author-Semibold.woff2", "weight": 600, "style": "normal"},
+        {"file": "fonts/author/Author-Bold.woff2", "weight": 700, "style": "normal"},
+        {"file": "fonts/author/Author-Variable.woff2", "weight": "100 900", "style": "normal", "variable": true},
+        {"file": "fonts/author/Author-ExtralightItalic.woff2", "weight": 200, "style": "italic"},
+        {"file": "fonts/author/Author-LightItalic.woff2", "weight": 300, "style": "italic"},
+        {"file": "fonts/author/Author-Italic.woff2", "weight": 400, "style": "italic"},
+        {"file": "fonts/author/Author-MediumItalic.woff2", "weight": 500, "style": "italic"},
+        {"file": "fonts/author/Author-SemiboldItalic.woff2", "weight": 600, "style": "italic"},
+        {"file": "fonts/author/Author-BoldItalic.woff2", "weight": 700, "style": "italic"},
+        {"file": "fonts/author/Author-VariableItalic.woff2", "weight": "100 900", "style": "italic", "variable": true}
+      ]
+    },
+    {
+      "family": "Borgen",
+      "id": "borgen",
+      "variants": [
+        {"file": "fonts/borgen/Borgen.otf", "weight": 400, "style": "normal"},
+        {"file": "fonts/borgen/BorgenOblique.otf", "weight": 400, "style": "italic"},
+        {"file": "fonts/borgen/BorgenBold.otf", "weight": 700, "style": "normal"},
+        {"file": "fonts/borgen/BorgenBoldOblique.otf", "weight": 700, "style": "italic"}
+      ]
+    },
+    {
+      "family": "Botanica",
+      "id": "botanica",
+      "variants": [
+        {"file": "fonts/botanica/botanica.ttf", "weight": 400, "style": "normal"},
+        {"file": "fonts/botanica/botanica.otf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Britanica Black",
+      "id": "britanica-black",
+      "variants": [
+        {"file": "fonts/britanica-black/britanica-black.ttf", "weight": 900, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Brunson",
+      "id": "brunson",
+      "variants": [
+        {"file": "fonts/brunson/Brunson.ttf", "weight": 400, "style": "normal"},
+        {"file": "fonts/brunson/Brunson Rough.ttf", "weight": 400, "style": "normal", "variant": "rough"}
+      ]
+    },
+    {
+      "family": "Cabinet Grotesk",
+      "id": "cabinet-grotesk",
+      "variants": [
+        {"file": "fonts/cabinet-grotesk/CabinetGrotesk-Thin.otf", "weight": 100, "style": "normal"},
+        {"file": "fonts/cabinet-grotesk/CabinetGrotesk-Extralight.otf", "weight": 200, "style": "normal"},
+        {"file": "fonts/cabinet-grotesk/CabinetGrotesk-Light.otf", "weight": 300, "style": "normal"},
+        {"file": "fonts/cabinet-grotesk/CabinetGrotesk-Regular.otf", "weight": 400, "style": "normal"},
+        {"file": "fonts/cabinet-grotesk/CabinetGrotesk-Medium.otf", "weight": 500, "style": "normal"},
+        {"file": "fonts/cabinet-grotesk/CabinetGrotesk-Bold.otf", "weight": 700, "style": "normal"},
+        {"file": "fonts/cabinet-grotesk/CabinetGrotesk-Extrabold.otf", "weight": 800, "style": "normal"},
+        {"file": "fonts/cabinet-grotesk/CabinetGrotesk-Black.otf", "weight": 900, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Clash Display",
+      "id": "clash-display",
+      "variants": [
+        {"file": "fonts/clash-display/ClashDisplay-Variable.woff2", "weight": "100 900", "style": "normal", "variable": true},
+        {"file": "fonts/clash-display/ClashDisplay-Extralight.woff2", "weight": 200, "style": "normal"},
+        {"file": "fonts/clash-display/ClashDisplay-Light.woff2", "weight": 300, "style": "normal"},
+        {"file": "fonts/clash-display/ClashDisplay-Regular.woff2", "weight": 400, "style": "normal"},
+        {"file": "fonts/clash-display/ClashDisplay-Medium.woff2", "weight": 500, "style": "normal"},
+        {"file": "fonts/clash-display/ClashDisplay-Semibold.woff2", "weight": 600, "style": "normal"},
+        {"file": "fonts/clash-display/ClashDisplay-Bold.woff2", "weight": 700, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Commune",
+      "id": "commune",
+      "variants": [
+        {"file": "fonts/commune/Commune.ttf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Duke Plus",
+      "id": "duke-plus",
+      "variants": [
+        {"file": "fonts/duke-plus/DUKEPLUS.ttf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Eingrantch Mono",
+      "id": "eingrantch-mono",
+      "variants": [
+        {"file": "fonts/eingrantch-mono/EingrantchMono-Medium.ttf", "weight": 500, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Elron Mono",
+      "id": "elron-mono",
+      "variants": [
+        {"file": "fonts/elron-mono/Elronmonospace.ttf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Fira Mono",
+      "id": "fira-mono",
+      "variants": [
+        {"file": "fonts/fira-mono/FiraMono-Regular.ttf", "weight": 400, "style": "normal"},
+        {"file": "fonts/fira-mono/FiraMono-Medium.ttf", "weight": 500, "style": "normal"},
+        {"file": "fonts/fira-mono/FiraMono-Bold.ttf", "weight": 700, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Freight Big",
+      "id": "freight-big",
+      "variants": [
+        {"file": "fonts/freight-big/FreightBigPro-Light.otf", "weight": 300, "style": "normal"},
+        {"file": "fonts/freight-big/FreightBigPro-Book.otf", "weight": 400, "style": "normal"},
+        {"file": "fonts/freight-big/FreightBigPro-LightItalic.otf", "weight": 300, "style": "italic"},
+        {"file": "fonts/freight-big/FreightBigPro-BookItalic.otf", "weight": 400, "style": "italic"}
+      ]
+    },
+    {
+      "family": "Manolo Mono",
+      "id": "manolo-mono",
+      "variants": [
+        {"file": "fonts/manolo-mono/manolomono.otf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Melodrama",
+      "id": "melodrama",
+      "variants": [
+        {"file": "fonts/melodrama/Melodrama-Light.otf", "weight": 300, "style": "normal"},
+        {"file": "fonts/melodrama/Melodrama-Regular.otf", "weight": 400, "style": "normal"},
+        {"file": "fonts/melodrama/Melodrama-Medium.otf", "weight": 500, "style": "normal"},
+        {"file": "fonts/melodrama/Melodrama-Semibold.otf", "weight": 600, "style": "normal"},
+        {"file": "fonts/melodrama/Melodrama-Bold.otf", "weight": 700, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Modernist Milk",
+      "id": "modernist-milk",
+      "variants": [
+        {"file": "fonts/modernist-milk/Modernist-Milk.otf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Monzane",
+      "id": "monzane",
+      "variants": [
+        {"file": "fonts/monzane/new_monzane.otf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Neomatrix Code",
+      "id": "neomatrix-code",
+      "variants": [
+        {"file": "fonts/neomatrix-code/NeomatrixCode.ttf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Neue Haas Display",
+      "id": "neue-haas-display",
+      "variants": [
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayXXThin.ttf", "weight": 100, "style": "normal"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayXXThinItalic.ttf", "weight": 100, "style": "italic"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayXThin.ttf", "weight": 200, "style": "normal"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayXThinItalic.ttf", "weight": 200, "style": "italic"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayThin.ttf", "weight": 300, "style": "normal"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayThinItalic.ttf", "weight": 300, "style": "italic"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayRoman.ttf", "weight": 400, "style": "normal"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayRomanItalic.ttf", "weight": 400, "style": "italic"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayMediu.ttf", "weight": 500, "style": "normal"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayMediumItalic.ttf", "weight": 500, "style": "italic"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayBold.ttf", "weight": 700, "style": "normal"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayBoldItalic.ttf", "weight": 700, "style": "italic"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayBlack.ttf", "weight": 900, "style": "normal"},
+        {"file": "fonts/neue-haas-display/NeueHaasDisplayBlackItalic.ttf", "weight": 900, "style": "italic"}
+      ]
+    },
+    {
+      "family": "Overpass Mono",
+      "id": "overpass-mono",
+      "variants": [
+        {"file": "fonts/overpass-mono/OverpassMono-Light.ttf", "weight": 300, "style": "normal"},
+        {"file": "fonts/overpass-mono/OverpassMono-Regular.ttf", "weight": 400, "style": "normal"},
+        {"file": "fonts/overpass-mono/OverpassMono-SemiBold.ttf", "weight": 600, "style": "normal"},
+        {"file": "fonts/overpass-mono/OverpassMono-Bold.ttf", "weight": 700, "style": "normal"},
+        {"file": "fonts/overpass-mono/OverpassMono[wght].ttf", "weight": "100 900", "style": "normal", "variable": true}
+      ]
+    },
+    {
+      "family": "Ranade",
+      "id": "ranade",
+      "variants": [
+        {"file": "fonts/ranade/Ranade-Thin.otf", "weight": 100, "style": "normal"},
+        {"file": "fonts/ranade/Ranade-ThinItalic.otf", "weight": 100, "style": "italic"},
+        {"file": "fonts/ranade/Ranade-Light.otf", "weight": 300, "style": "normal"},
+        {"file": "fonts/ranade/Ranade-LightItalic.otf", "weight": 300, "style": "italic"},
+        {"file": "fonts/ranade/Ranade-Regular.otf", "weight": 400, "style": "normal"},
+        {"file": "fonts/ranade/Ranade-Italic.otf", "weight": 400, "style": "italic"},
+        {"file": "fonts/ranade/Ranade-Medium.otf", "weight": 500, "style": "normal"},
+        {"file": "fonts/ranade/Ranade-MediumItalic.otf", "weight": 500, "style": "italic"},
+        {"file": "fonts/ranade/Ranade-Bold.otf", "weight": 700, "style": "normal"},
+        {"file": "fonts/ranade/Ranade-BoldItalic.otf", "weight": 700, "style": "italic"}
+      ]
+    },
+    {
+      "family": "Raygun",
+      "id": "raygun",
+      "variants": [
+        {"file": "fonts/raygun/raygun.otf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Redaction",
+      "id": "redaction",
+      "variants": [
+        {"file": "fonts/redaction/Redaction10-1GX2v.otf", "weight": 10, "style": "normal"},
+        {"file": "fonts/redaction/Redaction10Italic-nRYrO.otf", "weight": 10, "style": "italic"},
+        {"file": "fonts/redaction/Redaction10Bold-w1gB6.otf", "weight": 10, "style": "normal", "variant": "bold"},
+        {"file": "fonts/redaction/Redaction20-YzPy2.otf", "weight": 20, "style": "normal"},
+        {"file": "fonts/redaction/Redaction20Italic-K7ZJe.otf", "weight": 20, "style": "italic"},
+        {"file": "fonts/redaction/Redaction20Bold-2ODWX.otf", "weight": 20, "style": "normal", "variant": "bold"},
+        {"file": "fonts/redaction/Redaction35-BWXjw.otf", "weight": 35, "style": "normal"},
+        {"file": "fonts/redaction/Redaction35Italic-rgDrB.otf", "weight": 35, "style": "italic"},
+        {"file": "fonts/redaction/Redaction35Bold-MV3LP.otf", "weight": 35, "style": "normal", "variant": "bold"},
+        {"file": "fonts/redaction/Redaction50-8Mg4n.otf", "weight": 50, "style": "normal"},
+        {"file": "fonts/redaction/Redaction50Italic-2ODWo.otf", "weight": 50, "style": "italic"},
+        {"file": "fonts/redaction/Redaction50Bold-vmXRL.otf", "weight": 50, "style": "normal", "variant": "bold"},
+        {"file": "fonts/redaction/Redaction70-RpXqE.otf", "weight": 70, "style": "normal"},
+        {"file": "fonts/redaction/Redaction70Italic-MV3Lv.otf", "weight": 70, "style": "italic"},
+        {"file": "fonts/redaction/Redaction70Bold-K7ZJX.otf", "weight": 70, "style": "normal", "variant": "bold"},
+        {"file": "fonts/redaction/Redaction100-vmXR9.otf", "weight": 100, "style": "normal"},
+        {"file": "fonts/redaction/Redaction100Italic-rgDrK.otf", "weight": 100, "style": "italic"},
+        {"file": "fonts/redaction/Redaction100Bold-7BE64.otf", "weight": 100, "style": "normal", "variant": "bold"},
+        {"file": "fonts/redaction/Redaction-mL8P5.otf", "weight": 400, "style": "normal"},
+        {"file": "fonts/redaction/RedactionItalic-lgB8w.otf", "weight": 400, "style": "italic"},
+        {"file": "fonts/redaction/RedactionBold-d9yOZ.otf", "weight": 700, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Saans",
+      "id": "saans",
+      "variants": [
+        {"file": "fonts/saans/Saans-Regular.woff2", "weight": 400, "style": "normal"},
+        {"file": "fonts/saans/Saans-SemiBold.woff2", "weight": 600, "style": "normal"},
+        {"file": "fonts/saans/Saans-Bold.woff2", "weight": 700, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Sage",
+      "id": "sage",
+      "variants": [
+        {"file": "fonts/sage/Sage.otf", "weight": 400, "style": "normal"},
+        {"file": "fonts/sage/sage-webfont.ttf", "weight": 400, "style": "normal"},
+        {"file": "fonts/sage/sage-webfont.woff", "weight": 400, "style": "normal"},
+        {"file": "fonts/sage/sage-webfont.woff2", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Salmond",
+      "id": "salmond",
+      "variants": [
+        {"file": "fonts/salmond/SalmondLight.otf", "weight": 300, "style": "normal"},
+        {"file": "fonts/salmond/SalmondSemibold.otf", "weight": 600, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Sollarish",
+      "id": "sollarish",
+      "variants": [
+        {"file": "fonts/sollarish/Sollarish-Regular.ttf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Space Mono",
+      "id": "space-mono",
+      "variants": [
+        {"file": "fonts/space-mono/SpaceMono-Regular.ttf", "weight": 400, "style": "normal"},
+        {"file": "fonts/space-mono/SpaceMono-Italic.ttf", "weight": 400, "style": "italic"},
+        {"file": "fonts/space-mono/SpaceMono-Bold.ttf", "weight": 700, "style": "normal"},
+        {"file": "fonts/space-mono/SpaceMono-BoldItalic.ttf", "weight": 700, "style": "italic"}
+      ]
+    },
+    {
+      "family": "Stoned Youth",
+      "id": "stoned-youth",
+      "variants": [
+        {"file": "fonts/stoned-youth/StonedYouthRegular.ttf", "weight": 400, "style": "normal"},
+        {"file": "fonts/stoned-youth/StonedYouthRegular.woff", "weight": 400, "style": "normal"},
+        {"file": "fonts/stoned-youth/StonedYouthRegular.woff2", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Suika",
+      "id": "suika",
+      "variants": [
+        {"file": "fonts/suika/Suika-DEMO.otf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Sunflora Sans",
+      "id": "sunflora-sans",
+      "variants": [
+        {"file": "fonts/sunflora-sans/sunflora.otf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Switzer",
+      "id": "switzer",
+      "variants": [
+        {"file": "fonts/switzer/Switzer-Thin.otf", "weight": 100, "style": "normal"},
+        {"file": "fonts/switzer/Switzer-ThinItalic.otf", "weight": 100, "style": "italic"},
+        {"file": "fonts/switzer/Switzer-Extralight.otf", "weight": 200, "style": "normal"},
+        {"file": "fonts/switzer/Switzer-ExtralightItalic.otf", "weight": 200, "style": "italic"},
+        {"file": "fonts/switzer/Switzer-Light.otf", "weight": 300, "style": "normal"},
+        {"file": "fonts/switzer/Switzer-LightItalic.otf", "weight": 300, "style": "italic"},
+        {"file": "fonts/switzer/Switzer-Regular.otf", "weight": 400, "style": "normal"},
+        {"file": "fonts/switzer/Switzer-Italic.otf", "weight": 400, "style": "italic"},
+        {"file": "fonts/switzer/Switzer-Medium.otf", "weight": 500, "style": "normal"},
+        {"file": "fonts/switzer/Switzer-MediumItalic.otf", "weight": 500, "style": "italic"},
+        {"file": "fonts/switzer/Switzer-Semibold.otf", "weight": 600, "style": "normal"},
+        {"file": "fonts/switzer/Switzer-SemiboldItalic.otf", "weight": 600, "style": "italic"},
+        {"file": "fonts/switzer/Switzer-Bold.otf", "weight": 700, "style": "normal"},
+        {"file": "fonts/switzer/Switzer-BoldItalic.otf", "weight": 700, "style": "italic"},
+        {"file": "fonts/switzer/Switzer-Extrabold.otf", "weight": 800, "style": "normal"},
+        {"file": "fonts/switzer/Switzer-ExtraboldItalic.otf", "weight": 800, "style": "italic"},
+        {"file": "fonts/switzer/Switzer-Black.otf", "weight": 900, "style": "normal"},
+        {"file": "fonts/switzer/Switzer-BlackItalic.otf", "weight": 900, "style": "italic"}
+      ]
+    },
+    {
+      "family": "Syne Mono",
+      "id": "syne-mono",
+      "variants": [
+        {"file": "fonts/syne-mono/SyneMono-Regular.ttf", "weight": 400, "style": "normal"}
+      ]
+    },
+    {
+      "family": "Test The Future",
+      "id": "test-the-future",
+      "variants": [
+        {"file": "fonts/test-the-future/TestTheFuture--Thin-BF6645817a3698c.otf", "weight": 100, "style": "normal"},
+        {"file": "fonts/test-the-future/TestTheFuture--ThinItalic-BF664581771a1be.otf", "weight": 100, "style": "italic"},
+        {"file": "fonts/test-the-future/TestTheFuture--Extralight-BF66458176acccb.otf", "weight": 200, "style": "normal"},
+        {"file": "fonts/test-the-future/TestTheFuture--ExtralightItalic-BF66458179c3383.otf", "weight": 200, "style": "italic"},
+        {"file": "fonts/test-the-future/TestTheFuture--Light-BF664581769e13b.otf", "weight": 300, "style": "normal"},
+        {"file": "fonts/test-the-future/TestTheFuture--LightItalic-BF66458176e02eb.otf", "weight": 300, "style": "italic"},
+        {"file": "fonts/test-the-future/TestTheFuture--Regular-BF6645817a3005a.otf", "weight": 400, "style": "normal"},
+        {"file": "fonts/test-the-future/TestTheFuture--Italic-BF66458176db0ed.otf", "weight": 400, "style": "italic"},
+        {"file": "fonts/test-the-future/TestTheFuture--Medium-BF66458176dc698.otf", "weight": 500, "style": "normal"},
+        {"file": "fonts/test-the-future/TestTheFuture--MediumItalic-BF66458176db719.otf", "weight": 500, "style": "italic"},
+        {"file": "fonts/test-the-future/TestTheFuture--Bold-BF664581770dc3e.otf", "weight": 700, "style": "normal"},
+        {"file": "fonts/test-the-future/TestTheFuture--BoldItalic-BF66458176c4d60.otf", "weight": 700, "style": "italic"},
+        {"file": "fonts/test-the-future/TestTheFuture--Black-BF66458176b6697.otf", "weight": 900, "style": "normal"},
+        {"file": "fonts/test-the-future/TestTheFuture--BlackItalic-BF66458176c6c63.otf", "weight": 900, "style": "italic"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-Thin-BF6645817ca20e4.otf", "weight": 100, "style": "normal", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-ThinItalic-BF66458177685c1.otf", "weight": 100, "style": "italic", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-Extralight-BF66458175dba12.otf", "weight": 200, "style": "normal", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-ExtralightItalic-BF664581761c565.otf", "weight": 200, "style": "italic", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-Light-BF66458176a5cd8.otf", "weight": 300, "style": "normal", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-LightItalic-BF66458176ddcaf.otf", "weight": 300, "style": "italic", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-Regular-BF664581770acd7.otf", "weight": 400, "style": "normal", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-Italic-BF66458177077c2.otf", "weight": 400, "style": "italic", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-Medium-BF664581772207c.otf", "weight": 500, "style": "normal", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-MediumItalic-BF66458176e0292.otf", "weight": 500, "style": "italic", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-Bold-BF66458176b46d5.otf", "weight": 700, "style": "normal", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-BoldItalic-BF6645817562d89.otf", "weight": 700, "style": "italic", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-Black-BF66458175046b5.otf", "weight": 900, "style": "normal", "variant": "mono"},
+        {"file": "fonts/test-the-future/TestTheFuture-Mono-BlackItalic-BF6645817c9e6ed.otf", "weight": 900, "style": "italic", "variant": "mono"}
+      ]
+    },
+    {
+      "family": "Vactory Sans",
+      "id": "vactory-sans",
+      "variants": [
+        {"file": "fonts/vactory-sans/VactorySansRegular-drrAV.ttf", "weight": 400, "style": "normal"}
+      ]
+    }
+  ]
+}
