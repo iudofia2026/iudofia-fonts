@@ -29,9 +29,18 @@ class FontShowcase {
 
   async loadFonts() {
     try {
-      const response = await fetch('fonts.json');
-      this.fonts = await response.json();
-      this.fonts = this.fonts.fonts || this.fonts;
+      // Use inline FONTS_DATA if available (for file:// protocol support)
+      if (typeof FONTS_DATA !== 'undefined') {
+        this.fonts = FONTS_DATA.fonts || FONTS_DATA;
+      } else {
+        // Try to fetch fonts.json for server environments
+        const response = await fetch('fonts.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        this.fonts = data.fonts || data;
+      }
+
+      console.log(`Loaded ${this.fonts.length} font families`);
 
       // Load all fonts using FontFace API
       for (const font of this.fonts) {
@@ -40,7 +49,7 @@ class FontShowcase {
             const fontFace = new FontFace(
               font.family,
               `url(${variant.file})`,
-              { weight: variant.weight, style: variant.style }
+              { weight: typeof variant.weight === 'string' ? '400' : variant.weight, style: variant.style }
             );
             await fontFace.load();
             document.fonts.add(fontFace);
@@ -50,7 +59,12 @@ class FontShowcase {
         }
       }
     } catch (e) {
-      console.error('Failed to load fonts.json:', e);
+      console.error('Failed to load fonts:', e);
+      // Fallback: check if fonts is empty and log error to UI
+      if (this.fonts.length === 0) {
+        document.getElementById('fontName').textContent = 'Error loading fonts';
+        document.getElementById('fontInfo').textContent = e.message;
+      }
     }
   }
 
