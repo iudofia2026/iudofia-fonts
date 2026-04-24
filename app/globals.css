@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Scroll model — mirrors designhub (app/globals.css) and absoluterest.com:
+ * html + body height 100%, document scroll on the viewport, no rubber-band
+ * overscroll, no horizontal scroll. Keep `overscroll-behavior-y: none` on
+ * html (and body); never `overflow-y: auto` on body or root scroll locks
+ * break on some WebKit builds.
+ */
+@layer base {
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
+    touch-action: pan-x pan-y;
+    min-width: 320px;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
+  }
+}
+
 /* Match portfolio personal volume sliders (track-and-field / video-carousel) */
 .font-catalog-range {
   -webkit-appearance: none;
