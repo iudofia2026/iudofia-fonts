@@ -1,294 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>iudofia-fonts — Designhub font mirror &amp; checklist</title>
-    <style>
-      :root {
-        --bg: #0c0c0d;
-        --panel: #141416;
-        --border: #2a2a2e;
-        --text: #e8e6e3;
-        --muted: #8a8a90;
-        --accent: #6b9bd1;
-        --mono: "Fragment Mono", ui-monospace, monospace;
-        --sans: system-ui, sans-serif;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        background: var(--bg);
-        color: var(--text);
-        font-family: var(--sans);
-        font-size: 15px;
-        line-height: 1.55;
-        -webkit-font-smoothing: antialiased;
-      }
-      .wrap {
-        max-width: 52rem;
-        margin: 0 auto;
-        padding: 2.5rem 1.25rem 4rem;
-      }
-      header {
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 1.5rem;
-        margin-bottom: 2rem;
-      }
-      h1 {
-        font-family: var(--mono);
-        font-size: clamp(1.15rem, 3vw, 1.35rem);
-        font-weight: 400;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        margin: 0 0 0.5rem;
-        line-height: 1.25;
-      }
-      .lede {
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.95rem;
-        max-width: 42em;
-      }
-      h2 {
-        font-family: var(--mono);
-        font-size: 0.72rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin: 2.25rem 0 0.75rem;
-        font-weight: 400;
-      }
-      p.section-note {
-        margin: 0 0 1rem;
-        color: var(--muted);
-        font-size: 0.88rem;
-      }
-      ul.checklist {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        overflow: hidden;
-        background: var(--panel);
-      }
-      ul.checklist li {
-        display: grid;
-        grid-template-columns: 1.5rem 1fr;
-        gap: 0.65rem 0.85rem;
-        align-items: start;
-        padding: 0.65rem 1rem;
-        border-bottom: 1px solid var(--border);
-        font-size: 0.9rem;
-      }
-      ul.checklist li:last-child {
-        border-bottom: none;
-      }
-      ul.checklist li::before {
-        content: "✓";
-        color: var(--accent);
-        font-weight: 600;
-        font-size: 0.85rem;
-        line-height: 1.5;
-      }
-      .family {
-        font-family: var(--mono);
-        font-size: 0.82rem;
-        letter-spacing: 0.04em;
-        color: var(--text);
-      }
-      .path {
-        font-size: 0.78rem;
-        color: var(--muted);
-        grid-column: 2;
-      }
-      .usage {
-        font-size: 0.8rem;
-        color: var(--muted);
-        grid-column: 2;
-        margin-top: 0.15rem;
-      }
-      footer {
-        margin-top: 3rem;
-        padding-top: 1.25rem;
-        border-top: 1px solid var(--border);
-        font-size: 0.78rem;
-        color: var(--muted);
-        font-family: var(--mono);
-      }
-      code {
-        font-family: var(--mono);
-        font-size: 0.85em;
-        background: rgba(255, 255, 255, 0.06);
-        padding: 0.12em 0.35em;
-        border-radius: 4px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <header>
-        <h1>iudofia-fonts</h1>
-        <p class="lede">
-          Vendored font files used by <strong>designhub</strong> (<code>public/fonts</code>), mirrored here as the single
-          asset source. Below is a checklist of bundles in <code>fonts/</code> and where they surface in the app.
-        </p>
-      </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iudofia-fonts</title>
+  <style>
+@font-face{font-family:"Apercu Mono";src:url("fonts/apercu-mono/ApercuMonoPro-Light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Apercu Mono";src:url("fonts/apercu-mono/ApercuMonoPro-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Apercu Mono";src:url("fonts/apercu-mono/ApercuMonoPro-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Apercu Mono";src:url("fonts/apercu-mono/ApercuMonoPro-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-Extralight.woff2") format("woff2");font-weight:200;font-style:normal;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-Semibold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-Variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-ExtralightItalic.woff2") format("woff2");font-weight:200;font-style:italic;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-LightItalic.woff2") format("woff2");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-MediumItalic.woff2") format("woff2");font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-SemiboldItalic.woff2") format("woff2");font-weight:600;font-style:italic;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-BoldItalic.woff2") format("woff2");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"Author";src:url("fonts/author/Author-VariableItalic.woff2") format("woff2");font-weight:100 900;font-style:italic;font-display:swap;}
+@font-face{font-family:"Aux Mono";src:url("fonts/aux-mono/Aux Mono.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Borgen";src:url("fonts/borgen/Borgen.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Borgen";src:url("fonts/borgen/BorgenOblique.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Borgen";src:url("fonts/borgen/BorgenBold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Borgen";src:url("fonts/borgen/BorgenBoldOblique.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"Botanica";src:url("fonts/botanica/botanica.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Britanica Black";src:url("fonts/britanica-black/britanica-black.ttf") format("truetype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Brunson";src:url("fonts/brunson/Brunson.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Cabinet Grotesk";src:url("fonts/cabinet-grotesk/CabinetGrotesk-Thin.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Cabinet Grotesk";src:url("fonts/cabinet-grotesk/CabinetGrotesk-Extralight.otf") format("opentype");font-weight:200;font-style:normal;font-display:swap;}
+@font-face{font-family:"Cabinet Grotesk";src:url("fonts/cabinet-grotesk/CabinetGrotesk-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Cabinet Grotesk";src:url("fonts/cabinet-grotesk/CabinetGrotesk-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Cabinet Grotesk";src:url("fonts/cabinet-grotesk/CabinetGrotesk-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Cabinet Grotesk";src:url("fonts/cabinet-grotesk/CabinetGrotesk-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Cabinet Grotesk";src:url("fonts/cabinet-grotesk/CabinetGrotesk-Extrabold.otf") format("opentype");font-weight:800;font-style:normal;font-display:swap;}
+@font-face{font-family:"Cabinet Grotesk";src:url("fonts/cabinet-grotesk/CabinetGrotesk-Black.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Clash Display";src:url("fonts/clash-display/ClashDisplay-Variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Clash Display";src:url("fonts/clash-display/ClashDisplay-Extralight.woff2") format("woff2");font-weight:200;font-style:normal;font-display:swap;}
+@font-face{font-family:"Clash Display";src:url("fonts/clash-display/ClashDisplay-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Clash Display";src:url("fonts/clash-display/ClashDisplay-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Clash Display";src:url("fonts/clash-display/ClashDisplay-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Clash Display";src:url("fonts/clash-display/ClashDisplay-Semibold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Clash Display";src:url("fonts/clash-display/ClashDisplay-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Commune";src:url("fonts/commune/Commune.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Duke Plus";src:url("fonts/duke-plus/DUKEPLUS.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Eingrantch Mono";src:url("fonts/eingrantch-mono/EingrantchMono-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Elron Mono";src:url("fonts/elron-mono/Elronmonospace.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"FH Lecturis";src:url("fonts/fh-lecturis/fhlecturisroundedtest-bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"FH Lecturis";src:url("fonts/fh-lecturis/fhlecturisroundedtest-light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"FH Lecturis";src:url("fonts/fh-lecturis/fhlecturisroundedtest-regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Fira Mono";src:url("fonts/fira-mono/FiraMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Fira Mono";src:url("fonts/fira-mono/FiraMono-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Fira Mono";src:url("fonts/fira-mono/FiraMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Fragment Mono";src:url("fonts/fragment-mono/FragmentMono-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Fragment Mono";src:url("fonts/fragment-mono/FragmentMono-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Freight Big";src:url("fonts/freight-big/FreightBigPro-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Freight Big";src:url("fonts/freight-big/FreightBigPro-Book.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Freight Big";src:url("fonts/freight-big/FreightBigPro-LightItalic.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Freight Big";src:url("fonts/freight-big/FreightBigPro-BookItalic.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"ID Grotesk";src:url("fonts/id-grotesk/IDGrotesk-Bold-BF652cb1b4740d2.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"ID Grotesk";src:url("fonts/id-grotesk/IDGrotesk-Book-BF652cb1b45dae8.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"ID Grotesk";src:url("fonts/id-grotesk/IDGrotesk-Light-BF652cb1b459bdf.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"ID Grotesk";src:url("fonts/id-grotesk/IDGrotesk-Medium-BF652cb1b4765e1.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"ID Grotesk";src:url("fonts/id-grotesk/IDGrotesk-Semibold-BF652cb1b467d9d.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"ID Grotesk";src:url("fonts/id-grotesk/IDGrotesk-Thin-BF652cb1b461e9c.ttf") format("truetype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"II Vorkurs";src:url("fonts/iivorkurs/II Vorkurs Bold Oblique.ttf") format("truetype");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"II Vorkurs";src:url("fonts/iivorkurs/II Vorkurs Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"II Vorkurs";src:url("fonts/iivorkurs/II Vorkurs Light Oblique.ttf") format("truetype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"II Vorkurs";src:url("fonts/iivorkurs/II Vorkurs Light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"II Vorkurs";src:url("fonts/iivorkurs/II Vorkurs Medium Oblique.ttf") format("truetype");font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:"II Vorkurs";src:url("fonts/iivorkurs/II Vorkurs Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Kurdis";src:url("fonts/kurdis/KurdisVariableFamilyTest-Black-BF64bf41dfa220b.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Kurdis";src:url("fonts/kurdis/KurdisVariableFamilyTest-Bold-BF64bf41dfbff9f.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Kurdis";src:url("fonts/kurdis/KurdisVariableFamilyTest-Condensed-BF64bf41dfe7ff5.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Kurdis";src:url("fonts/kurdis/KurdisVariableFamilyTest-CondensedExtraBold-BF64bf41e17d630.otf") format("opentype");font-weight:800;font-style:normal;font-display:swap;}
+@font-face{font-family:"Kurdis";src:url("fonts/kurdis/KurdisVariableFamilyTest-CondensedSemiBold-BF64bf41e17f43b.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Manolo Mono";src:url("fonts/manolo-mono/manolomono.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Melodrama";src:url("fonts/melodrama/Melodrama-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Melodrama";src:url("fonts/melodrama/Melodrama-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Melodrama";src:url("fonts/melodrama/Melodrama-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Melodrama";src:url("fonts/melodrama/Melodrama-Semibold.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Melodrama";src:url("fonts/melodrama/Melodrama-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Modernist Milk";src:url("fonts/modernist-milk/Modernist-Milk.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Monzane";src:url("fonts/monzane/new_monzane.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk";src:url("fonts/neogrotesk/Fontspring-DEMO-neogroteskess-black.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk";src:url("fonts/neogrotesk/Fontspring-DEMO-neogroteskess-bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk";src:url("fonts/neogrotesk/Fontspring-DEMO-neogroteskess-light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk";src:url("fonts/neogrotesk/Fontspring-DEMO-neogroteskess-regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk";src:url("fonts/neogrotesk/Fontspring-DEMO-neogroteskess-ultralight.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk Sans";src:url("fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-black.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk Sans";src:url("fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk Sans";src:url("fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk Sans";src:url("fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neogrotesk Sans";src:url("fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-ultralight.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neomatrix Code";src:url("fonts/neomatrix-code/NeomatrixCode.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayXXThin.ttf") format("truetype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayXXThinItalic.ttf") format("truetype");font-weight:100;font-style:italic;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayXThin.ttf") format("truetype");font-weight:200;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayXThinItalic.ttf") format("truetype");font-weight:200;font-style:italic;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayThin.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayThinItalic.ttf") format("truetype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayRoman.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayRomanItalic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayMediu.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayMediumItalic.ttf") format("truetype");font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayBold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayBoldItalic.ttf") format("truetype");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayBlack.ttf") format("truetype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Neue Haas Display";src:url("fonts/neue-haas-display/NeueHaasDisplayBlackItalic.ttf") format("truetype");font-weight:900;font-style:italic;font-display:swap;}
+@font-face{font-family:"Northura";src:url("fonts/northura/northura-black.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Northura";src:url("fonts/northura/northura-blackultraexpanded.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Northura";src:url("fonts/northura/northura-bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Northura";src:url("fonts/northura/northura-expanded.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Northura";src:url("fonts/northura/northura-light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Northura";src:url("fonts/northura/northura-medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Overpass Mono";src:url("fonts/overpass-mono/OverpassMono-Light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Overpass Mono";src:url("fonts/overpass-mono/OverpassMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Overpass Mono";src:url("fonts/overpass-mono/OverpassMono-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Overpass Mono";src:url("fonts/overpass-mono/OverpassMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Overpass Mono";src:url("fonts/overpass-mono/OverpassMono[wght].ttf") format("truetype");font-weight:100 900;font-style:normal;font-display:swap;}
+@font-face{font-family:"PP Neue Montreal";src:url("fonts/pp-neue-montreal/PPNeueMontreal-Medium.woff") format("woff");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Proto Mono";src:url("fonts/protomono/Proto Mono Light Shadow.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Proto Mono";src:url("fonts/protomono/Proto Mono Medium Shadow.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Proto Mono";src:url("fonts/protomono/Proto Mono Regular Shadow.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Proto Mono";src:url("fonts/protomono/Proto Mono Semi Bold Shadow.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-Thin.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-ThinItalic.otf") format("opentype");font-weight:100;font-style:italic;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-LightItalic.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-Italic.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-MediumItalic.otf") format("opentype");font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Ranade";src:url("fonts/ranade/Ranade-BoldItalic.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"Raygun";src:url("fonts/raygun/raygun.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction10-1GX2v.otf") format("opentype");font-weight:10;font-style:normal;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction10Italic-nRYrO.otf") format("opentype");font-weight:10;font-style:italic;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction20-YzPy2.otf") format("opentype");font-weight:20;font-style:normal;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction20Italic-K7ZJe.otf") format("opentype");font-weight:20;font-style:italic;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction35-BWXjw.otf") format("opentype");font-weight:35;font-style:normal;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction35Italic-rgDrB.otf") format("opentype");font-weight:35;font-style:italic;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction50-8Mg4n.otf") format("opentype");font-weight:50;font-style:normal;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction50Italic-2ODWo.otf") format("opentype");font-weight:50;font-style:italic;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction70-RpXqE.otf") format("opentype");font-weight:70;font-style:normal;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction70Italic-MV3Lv.otf") format("opentype");font-weight:70;font-style:italic;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction100-vmXR9.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction100Italic-rgDrK.otf") format("opentype");font-weight:100;font-style:italic;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/Redaction-mL8P5.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/RedactionItalic-lgB8w.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Redaction";src:url("fonts/redaction/RedactionBold-d9yOZ.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Saans";src:url("fonts/saans/Saans-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Saans";src:url("fonts/saans/Saans-SemiBold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Saans";src:url("fonts/saans/Saans-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Sage";src:url("fonts/sage/Sage.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Salmond";src:url("fonts/salmond/SalmondLight.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Salmond";src:url("fonts/salmond/SalmondSemibold.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Sollarish";src:url("fonts/sollarish/Sollarish-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Space Mono";src:url("fonts/space-mono/SpaceMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Space Mono";src:url("fonts/space-mono/SpaceMono-Italic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Space Mono";src:url("fonts/space-mono/SpaceMono-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Space Mono";src:url("fonts/space-mono/SpaceMono-BoldItalic.ttf") format("truetype");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"Stoned Youth";src:url("fonts/stoned-youth/StonedYouthRegular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Suika";src:url("fonts/suika/Suika-DEMO.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Sunflora Sans";src:url("fonts/sunflora-sans/sunflora.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-Black-iF67d6f0d9c2423.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-BlackItalic-iF67d6f0d9d18e0.otf") format("opentype");font-weight:900;font-style:italic;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-Bold-iF67d6f0d9b5f70.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-BoldItalic-iF67d6f0d9cb39f.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-Light-iF67d6f0d98142b.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-LightItalic-iF67d6f0d98e9d2.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-Medium-iF67d6f0d9a273f.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-MediumItalic-iF67d6f0d9a9acb.otf") format("opentype");font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-Regular-iF67d6f0d9954ce.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-RegularItalic-iF67d6f0d99be16.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-SemiBold-iF67d6f0d9afd52.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Svatopluk";src:url("fonts/svatopluk/Svatopluk-SemiBoldItalic-iF67d6f0d9bc165.otf") format("opentype");font-weight:600;font-style:italic;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Thin.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-ThinItalic.otf") format("opentype");font-weight:100;font-style:italic;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Extralight.otf") format("opentype");font-weight:200;font-style:normal;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-ExtralightItalic.otf") format("opentype");font-weight:200;font-style:italic;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-LightItalic.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Italic.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-MediumItalic.otf") format("opentype");font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Semibold.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-SemiboldItalic.otf") format("opentype");font-weight:600;font-style:italic;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-BoldItalic.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Extrabold.otf") format("opentype");font-weight:800;font-style:normal;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-ExtraboldItalic.otf") format("opentype");font-weight:800;font-style:italic;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-Black.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Switzer";src:url("fonts/switzer/Switzer-BlackItalic.otf") format("opentype");font-weight:900;font-style:italic;font-display:swap;}
+@font-face{font-family:"Syne Mono";src:url("fonts/syne-mono/SyneMono-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--Thin-BF6645817a3698c.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--ThinItalic-BF664581771a1be.otf") format("opentype");font-weight:100;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--Extralight-BF66458176acccb.otf") format("opentype");font-weight:200;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--ExtralightItalic-BF66458179c3383.otf") format("opentype");font-weight:200;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--Light-BF664581769e13b.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--LightItalic-BF66458176e02eb.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--Regular-BF6645817a3005a.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--Italic-BF66458176db0ed.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--Medium-BF66458176dc698.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--MediumItalic-BF66458176db719.otf") format("opentype");font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--Bold-BF664581770dc3e.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--BoldItalic-BF66458176c4d60.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--Black-BF66458176b6697.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future";src:url("fonts/test-the-future/TestTheFuture--BlackItalic-BF66458176c6c63.otf") format("opentype");font-weight:900;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-Black.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-BlackItalic-BF6645817c9e6ed.otf") format("opentype");font-weight:900;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-BoldItalic-BF6645817562d89.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-Extralight-BF66458175dba12.otf") format("opentype");font-weight:200;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-ExtralightItalic-BF664581761c565.otf") format("opentype");font-weight:200;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-Italic-BF66458177077c2.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-LightItalic-BF66458176ddcaf.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-MediumItalic-BF66458176e0292.otf") format("opentype");font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-Thin.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:"Test The Future Mono";src:url("fonts/test-the-future-mono/TestTheFuture-Mono-ThinItalic-BF66458177685c1.otf") format("opentype");font-weight:100;font-style:italic;font-display:swap;}
+@font-face{font-family:"Vactory Sans";src:url("fonts/vactory-sans/VactorySansRegular-drrAV.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+    :root {
+      --bg: #faf9f7;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .shell {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    h1 {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.35rem;
+    }
+    .sub {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin: 0 0 2rem;
+      letter-spacing: 0.04em;
+    }
+    label.switcher-label {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+    select.font-switcher {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 1.75rem;
+      padding: 0;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: var(--ink);
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      outline: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b6b6b' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0 center;
+      padding-right: 1.25rem;
+    }
+    select.font-switcher:focus {
+      outline: none;
+    }
+    .preview {
+      width: 100%;
+      min-height: 12rem;
+      padding: 0;
+      margin: 0;
+      font-size: clamp(1.35rem, 3.2vw, 2rem);
+      line-height: 1.35;
+      font-weight: 400;
+      font-style: normal;
+      font-synthesis: none;
+      color: var(--ink);
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      outline: none;
+      resize: vertical;
+    }
+    .preview:focus { outline: none; }
+    .preview::placeholder {
+      color: var(--muted);
+      opacity: 0.65;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+    footer code { font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <h1>iudofia-fonts</h1>
+    <p class="sub">49 families · every face is registered above; pick one to preview</p>
 
-      <h2>Vendored in <code>fonts/</code> (designhub)</h2>
-      <p class="section-note">Each line is present in this repo. “✓” means the bundle is tracked here; keep designhub paths in sync with this tree.</p>
-      <ul class="checklist" aria-label="Vendored font bundles">
-        <li>
-          <span class="family">Aux Mono</span>
-          <span class="path"><code>fonts/aux-mono/</code></span>
-          <span class="usage"><code>app/globals.css</code> · <code>app/dashboard/dashboard.module.css</code></span>
-        </li>
-        <li>
-          <span class="family">Borgen</span>
-          <span class="path"><code>fonts/borgen/</code></span>
-          <span class="usage"><code>app/globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">Botanica</span>
-          <span class="path"><code>fonts/botanica/</code></span>
-          <span class="usage"><code>app/globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">Cabinet Grotesk</span>
-          <span class="path"><code>fonts/cabinet-grotesk/</code></span>
-          <span class="usage"><code>app/globals.css</code> · <code>app/ar/page.tsx</code> · <code>app/neolog/page.tsx</code></span>
-        </li>
-        <li>
-          <span class="family">Clash Display</span>
-          <span class="path"><code>fonts/clash-display/</code></span>
-          <span class="usage"><code>app/globals.css</code> · <code>app/ar/page.tsx</code> · <code>app/neolog/page.tsx</code></span>
-        </li>
-        <li>
-          <span class="family">Elron Mono</span>
-          <span class="path"><code>fonts/elron-mono/</code></span>
-          <span class="usage"><code>app/globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">FH Lecturis / FH Lecturis Rounded</span>
-          <span class="path"><code>fonts/fh-lecturis/</code></span>
-          <span class="usage"><code>app/globals.css</code> · <code>app/page.tsx</code> (rounded)</span>
-        </li>
-        <li>
-          <span class="family">Fragment Mono</span>
-          <span class="path"><code>fonts/fragment-mono/</code></span>
-          <span class="usage"><code>app/portfolio/layout.tsx</code> · portable N2 / transitions / visitor map / study lab</span>
-        </li>
-        <li>
-          <span class="family">Freight Big</span>
-          <span class="path"><code>fonts/freight-big/</code></span>
-          <span class="usage">Bundled in repo; not referenced in <code>globals.css</code> (available for experiments)</span>
-        </li>
-        <li>
-          <span class="family">ID Grotesk</span>
-          <span class="path"><code>fonts/id-grotesk/</code></span>
-          <span class="usage"><code>app/globals.css</code> · <code>app/dashboard/dashboard.module.css</code></span>
-        </li>
-        <li>
-          <span class="family">II Vorkurs</span>
-          <span class="path"><code>fonts/iivorkurs/</code></span>
-          <span class="usage"><code>app/globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">Kurdis</span>
-          <span class="path"><code>fonts/kurdis/</code></span>
-          <span class="usage"><code>app/globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">Neogrotesk</span>
-          <span class="path"><code>fonts/neogrotesk/</code></span>
-          <span class="usage"><code>app/globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">Neue Haas Display</span>
-          <span class="path"><code>fonts/neue-haas-display/</code></span>
-          <span class="usage"><code>app/globals.css</code> · hub + labs (display stack) · <code>app/dashboard/dashboard.module.css</code></span>
-        </li>
-        <li>
-          <span class="family">Northura</span>
-          <span class="path"><code>fonts/northura/</code></span>
-          <span class="usage"><code>app/globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">PP Neue Montreal</span>
-          <span class="path"><code>fonts/pp-neue-montreal/</code></span>
-          <span class="usage"><code>app/portfolio/layout.tsx</code> · legacy Webflow CSS</span>
-        </li>
-        <li>
-          <span class="family">Proto Mono</span>
-          <span class="path"><code>fonts/protomono/</code></span>
-          <span class="usage"><code>app/globals.css</code> · <code>app/page.tsx</code> · <code>app/dashboard/dashboard.module.css</code> · geometric button</span>
-        </li>
-        <li>
-          <span class="family">Redaction</span>
-          <span class="path"><code>fonts/redaction/</code></span>
-          <span class="usage">Bundled in repo; not in <code>globals.css</code> (available for experiments)</span>
-        </li>
-        <li>
-          <span class="family">Saans</span>
-          <span class="path"><code>fonts/saans/</code></span>
-          <span class="usage">Bundled in repo; not in <code>globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">Sage</span>
-          <span class="path"><code>fonts/sage/</code></span>
-          <span class="usage">Bundled in repo; not in <code>globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">Svatopluk</span>
-          <span class="path"><code>fonts/svatopluk/</code></span>
-          <span class="usage"><code>app/globals.css</code> · <code>app/ar/page.tsx</code> · <code>app/neolog/page.tsx</code></span>
-        </li>
-        <li>
-          <span class="family">Switzer</span>
-          <span class="path"><code>fonts/switzer/</code></span>
-          <span class="usage"><code>app/globals.css</code></span>
-        </li>
-        <li>
-          <span class="family">Test The Future Mono</span>
-          <span class="path"><code>fonts/test-the-future-mono/</code></span>
-          <span class="usage">Placeholder bundle; hook in <code>globals.css</code> commented until wired</span>
-        </li>
-      </ul>
+    <label class="switcher-label" for="fontSelect">Font</label>
+    <select id="fontSelect" class="font-switcher" aria-label="Choose font family">
+        <option value="0" selected>Apercu Mono</option>
+        <option value="1">Author</option>
+        <option value="2">Aux Mono</option>
+        <option value="3">Borgen</option>
+        <option value="4">Botanica</option>
+        <option value="5">Britanica Black</option>
+        <option value="6">Brunson</option>
+        <option value="7">Cabinet Grotesk</option>
+        <option value="8">Clash Display</option>
+        <option value="9">Commune</option>
+        <option value="10">Duke Plus</option>
+        <option value="11">Eingrantch Mono</option>
+        <option value="12">Elron Mono</option>
+        <option value="13">FH Lecturis</option>
+        <option value="14">Fira Mono</option>
+        <option value="15">Fragment Mono</option>
+        <option value="16">Freight Big</option>
+        <option value="17">ID Grotesk</option>
+        <option value="18">II Vorkurs</option>
+        <option value="19">Kurdis</option>
+        <option value="20">Manolo Mono</option>
+        <option value="21">Melodrama</option>
+        <option value="22">Modernist Milk</option>
+        <option value="23">Monzane</option>
+        <option value="24">Neogrotesk</option>
+        <option value="25">Neogrotesk Sans</option>
+        <option value="26">Neomatrix Code</option>
+        <option value="27">Neue Haas Display</option>
+        <option value="28">Northura</option>
+        <option value="29">Overpass Mono</option>
+        <option value="30">PP Neue Montreal</option>
+        <option value="31">Proto Mono</option>
+        <option value="32">Ranade</option>
+        <option value="33">Raygun</option>
+        <option value="34">Redaction</option>
+        <option value="35">Saans</option>
+        <option value="36">Sage</option>
+        <option value="37">Salmond</option>
+        <option value="38">Sollarish</option>
+        <option value="39">Space Mono</option>
+        <option value="40">Stoned Youth</option>
+        <option value="41">Suika</option>
+        <option value="42">Sunflora Sans</option>
+        <option value="43">Svatopluk</option>
+        <option value="44">Switzer</option>
+        <option value="45">Syne Mono</option>
+        <option value="46">Test The Future</option>
+        <option value="47">Test The Future Mono</option>
+        <option value="48">Vactory Sans</option>
+    </select>
 
-      <h2>Google Fonts (designhub root layout)</h2>
-      <p class="section-note">
-        These are loaded with <code>next/font/google</code> in <code>designhub/app/layout.tsx</code>, not duplicated as files
-        in this repo. CSS variables: <code>--font-inter</code>, <code>--font-heading</code>, <code>--font-body</code>.
-      </p>
-      <ul class="checklist" aria-label="Google Fonts checklist">
-        <li>
-          <span class="family">Inter</span>
-          <span class="path">npm / Google Fonts</span>
-          <span class="usage"><code>--font-inter</code> · default UI sans stack</span>
-        </li>
-        <li>
-          <span class="family">Hammersmith One</span>
-          <span class="path">npm / Google Fonts</span>
-          <span class="usage"><code>--font-heading</code> · Tailwind / <code>globals.css</code> fallbacks</span>
-        </li>
-        <li>
-          <span class="family">Space Grotesk</span>
-          <span class="path">npm / Google Fonts</span>
-          <span class="usage"><code>--font-body</code> · Tailwind / <code>globals.css</code> fallbacks</span>
-        </li>
-      </ul>
+    <textarea
+      id="preview"
+      class="preview"
+      rows="8"
+      autocomplete="off"
+      spellcheck="false"
+      placeholder="Type here"
+    >The quick brown fox jumps over the lazy dog. 0123456789</textarea>
 
-      <h2>System stacks (no files)</h2>
-      <p class="section-note">Some portfolio and lab components use <code>-apple-system</code>, <code>Segoe UI</code>, <code>Roboto</code>, or generic <code>monospace</code> for UI chrome or SVG text.</p>
-
-      <footer>
-        Sync from designhub:
-        <code>rsync -a designhub/public/fonts/ iudofia-fonts/fonts/</code>
-      </footer>
-    </div>
-  </body>
+    <footer><code>node scripts/sync-font-catalog.mjs</code> · <code>node scripts/build-index.mjs</code></footer>
+  </div>
+  <script>
+    (function () {
+      var names = ["Apercu Mono","Author","Aux Mono","Borgen","Botanica","Britanica Black","Brunson","Cabinet Grotesk","Clash Display","Commune","Duke Plus","Eingrantch Mono","Elron Mono","FH Lecturis","Fira Mono","Fragment Mono","Freight Big","ID Grotesk","II Vorkurs","Kurdis","Manolo Mono","Melodrama","Modernist Milk","Monzane","Neogrotesk","Neogrotesk Sans","Neomatrix Code","Neue Haas Display","Northura","Overpass Mono","PP Neue Montreal","Proto Mono","Ranade","Raygun","Redaction","Saans","Sage","Salmond","Sollarish","Space Mono","Stoned Youth","Suika","Sunflora Sans","Svatopluk","Switzer","Syne Mono","Test The Future","Test The Future Mono","Vactory Sans"];
+      var sel = document.getElementById("fontSelect");
+      var preview = document.getElementById("preview");
+      function applyFont() {
+        var i = parseInt(sel.value, 10);
+        if (isNaN(i) || !names[i]) return;
+        preview.style.fontFamily = JSON.stringify(names[i]) + ", serif";
+      }
+      sel.addEventListener("change", applyFont);
+      applyFont();
+    })();
+  </script>
+</body>
 </html>
