@@ -117,6 +117,9 @@ function RangeField({
   onChange: (n: number) => void;
   suffix?: string;
 }) {
+  const span = max - min;
+  const pct = span <= 0 ? 0 : Math.min(100, Math.max(0, ((value - min) / span) * 100));
+
   return (
     <div>
       <div className="flex items-baseline justify-between gap-2">
@@ -135,7 +138,10 @@ function RangeField({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-2 h-1.5 w-full cursor-pointer appearance-none rounded-full bg-[#2a2a2e] accent-[#4b9cd3] [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#c4c2be]"
+        className="font-catalog-range mt-2"
+        style={{
+          background: `linear-gradient(to right, rgba(255,255,255,0.6) ${pct}%, rgba(255,255,255,0.25) ${pct}%)`,
+        }}
       />
     </div>
   );
@@ -227,7 +233,109 @@ function AnimatedSelect<T extends string | number>({
 const SAMPLE = "The quick brown fox jumps over the lazy dog. 0123456789";
 const PREVIEW_SNIP = "AaGg";
 
-type TextAlign = "left" | "center" | "right" | "justify";
+function FontFamilyDropdown({
+  fonts,
+  selectedIndex,
+  onSelect,
+}: {
+  fonts: FontEntry[];
+  selectedIndex: number;
+  onSelect: (i: number) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const current = fonts[selectedIndex] ?? fonts[0];
+
+  useEffect(() => {
+    function onDoc(e: MouseEvent) {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", onDoc);
+    return () => document.removeEventListener("mousedown", onDoc);
+  }, []);
+
+  return (
+    <div className="relative" ref={ref}>
+      <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-[#5a5a5a]">
+        Family
+      </span>
+      <motion.button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="mt-1 flex w-full items-center justify-between gap-2 bg-[rgba(42,42,46,0.55)] px-3 py-2.5 text-left outline-none ring-1 ring-[#2a2a2e] transition-[box-shadow] hover:ring-[#3a3a40] focus-visible:ring-[#4b9cd3]"
+        whileTap={{ scale: 0.995 }}
+        transition={{ duration: 0.2, ease: N2_EASE }}
+        aria-expanded={open}
+        aria-haspopup="listbox"
+      >
+        <span className="flex min-w-0 flex-1 flex-col items-start gap-0.5 text-left">
+          <span className="truncate font-mono text-[12px] uppercase tracking-[0.12em] text-[#5a5a5a]">
+            {current?.family ?? "—"}
+          </span>
+          <span
+            className="block w-full truncate text-[1.05rem] leading-none text-[#c4c2be]"
+            style={{
+              fontFamily: current
+                ? `${JSON.stringify(current.family)}, serif`
+                : "serif",
+            }}
+          >
+            {PREVIEW_SNIP}
+          </span>
+        </span>
+        <motion.span
+          animate={{ rotate: open ? 180 : 0 }}
+          transition={{ duration: 0.28, ease: N2_EASE }}
+          className="shrink-0 self-start pt-1 text-[#6b6b6b]"
+          aria-hidden
+        >
+          ▾
+        </motion.span>
+      </motion.button>
+      <AnimatePresence>
+        {open ? (
+          <motion.ul
+            role="listbox"
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.22, ease: N2_EASE }}
+            className="absolute left-0 right-0 top-full z-30 mt-1 max-h-64 overflow-y-auto bg-[rgba(18,18,20,0.96)] py-1 shadow-[0_12px_40px_rgba(0,0,0,0.45)] ring-1 ring-[#2a2a2e] backdrop-blur-md"
+          >
+            {fonts.map((f, i) => (
+              <li key={f.id} role="option" aria-selected={i === selectedIndex}>
+                <button
+                  type="button"
+                  className={`w-full px-3 py-2.5 text-left transition-colors ${
+                    i === selectedIndex
+                      ? "bg-[rgba(75,156,211,0.12)]"
+                      : "hover:bg-[rgba(255,255,255,0.04)]"
+                  }`}
+                  onClick={() => {
+                    onSelect(i);
+                    setOpen(false);
+                  }}
+                >
+                  <span className="block truncate font-mono text-[12px] uppercase tracking-[0.12em] text-[#5a5a5a]">
+                    {f.family}
+                  </span>
+                  <span
+                    className="mt-0.5 block truncate text-[1.05rem] leading-none text-[#c4c2be]"
+                    style={{
+                      fontFamily: `${JSON.stringify(f.family)}, serif`,
+                    }}
+                  >
+                    {PREVIEW_SNIP}
+                  </span>
+                </button>
+              </li>
+            ))}
+          </motion.ul>
+        ) : null}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
   const hubBase =
@@ -241,7 +349,6 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
   );
 
   const [selected, setSelected] = useState(0);
-  const [listOpen, setListOpen] = useState(true);
   const [typoOpen, setTypoOpen] = useState(true);
   const [text, setText] = useState(SAMPLE);
   const [selectedStyle, setSelectedStyle] = useState<string>("normal");
@@ -249,7 +356,6 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
   const [fontSizePx, setFontSizePx] = useState(26);
   const [lineHeight, setLineHeight] = useState(1.35);
   const [letterSpacingEm, setLetterSpacingEm] = useState(0);
-  const [textAlign, setTextAlign] = useState<TextAlign>("left");
 
   const faceCss = useMemo(() => {
     const parts: string[] = [];
@@ -321,24 +427,11 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
     [current, selectedStyle],
   );
 
-  const listShellClass =
-    "scrollbar-thin space-y-0.5 overflow-x-hidden pr-1 md:max-h-[calc(100vh-11rem)] md:overflow-y-auto " +
-    (listOpen
-      ? "max-md:max-h-[42vh] max-md:overflow-y-auto max-md:opacity-100"
-      : "max-md:max-h-0 max-md:overflow-hidden max-md:opacity-0 max-md:pointer-events-none");
-
   const typoShellClass =
     "scrollbar-thin space-y-5 overflow-x-hidden overflow-y-auto md:max-h-[calc(100vh-11rem)] " +
     (typoOpen
       ? "max-md:max-h-[min(68vh,520px)] max-md:opacity-100"
       : "max-md:max-h-0 max-md:overflow-hidden max-md:opacity-0 max-md:pointer-events-none");
-
-  const alignments: { key: TextAlign; label: string }[] = [
-    { key: "left", label: "Left" },
-    { key: "center", label: "Center" },
-    { key: "right", label: "Right" },
-    { key: "justify", label: "Justify" },
-  ];
 
   return (
     <div className="relative min-h-screen bg-[#0a0a0a] text-[#9a9a9a]">
@@ -360,89 +453,14 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
       <div className="md:hidden" style={{ height: 48 }} />
 
       <div
-        className="relative z-[1] mx-auto flex max-w-[100rem] flex-1 flex-col pb-20 md:flex-row md:pb-6"
+        className="relative z-[1] mx-auto flex max-w-[100rem] flex-1 flex-col pb-20 md:pb-6"
         style={{
           paddingLeft: "1.5rem",
           paddingRight: "1.5rem",
           minHeight: "calc(100vh - 80px)",
         }}
       >
-        <motion.aside
-          layout
-          className="mb-2 flex w-full shrink-0 flex-col md:mb-0 md:w-[min(100%,300px)] md:border-r md:border-[#1f1f1f] md:pr-5"
-          transition={{ duration: 0.35, ease: N2_EASE }}
-        >
-          <motion.button
-            type="button"
-            onClick={() => setListOpen((o) => !o)}
-            className="flex w-full items-center justify-between py-2 text-left md:pointer-events-none md:py-3"
-            aria-expanded={listOpen}
-            whileTap={{ scale: 0.995 }}
-            transition={{ duration: 0.2, ease: N2_EASE }}
-          >
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#6b6b6b]">
-              Families
-            </span>
-            <motion.span
-              animate={{ rotate: listOpen ? 180 : 0 }}
-              transition={{ duration: 0.3, ease: N2_EASE }}
-              className="text-[#6b6b6b] md:hidden"
-              aria-hidden
-            >
-              ▾
-            </motion.span>
-          </motion.button>
-
-          <ul
-            className={listShellClass}
-            style={{
-              transitionProperty: "max-height, opacity",
-              transitionDuration: "0.34s",
-              transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
-            }}
-          >
-            {catalog.fonts.map((f, i) => (
-              <li key={f.id}>
-                <motion.button
-                  type="button"
-                  layout
-                  onClick={() => setSelected(i)}
-                  className={`relative w-full rounded-none px-2 py-2.5 text-left transition-colors duration-200 ${
-                    i === selected
-                      ? "bg-[rgba(42,42,46,0.55)] text-[#e0ded9]"
-                      : "bg-transparent text-[#8a8a8a] hover:bg-[rgba(255,255,255,0.03)]"
-                  }`}
-                  transition={{ duration: 0.22, ease: N2_EASE }}
-                >
-                  {i === selected ? (
-                    <motion.span
-                      layoutId="sidebar-active"
-                      className="absolute bottom-2 left-0 top-2 w-0.5 bg-[#4b9cd3]"
-                      transition={{
-                        type: "spring",
-                        stiffness: 380,
-                        damping: 32,
-                      }}
-                    />
-                  ) : null}
-                  <span className="block truncate font-mono text-[9px] uppercase tracking-[0.14em] text-[#5a5a5a]">
-                    {f.family}
-                  </span>
-                  <span
-                    className="mt-1 block truncate text-[1.05rem] leading-none text-[#c4c2be]"
-                    style={{
-                      fontFamily: `${JSON.stringify(f.family)}, serif`,
-                    }}
-                  >
-                    {PREVIEW_SNIP}
-                  </span>
-                </motion.button>
-              </li>
-            ))}
-          </ul>
-        </motion.aside>
-
-        <main className="flex min-h-0 min-w-0 flex-1 flex-col gap-3 md:flex-row md:gap-0 md:pl-6">
+        <main className="flex min-h-0 min-w-0 flex-1 flex-col gap-3 md:flex-row md:gap-0">
           <motion.aside
             layout
             className="flex w-full shrink-0 flex-col md:mb-0 md:w-[min(100%,248px)] md:border-r md:border-[#1f1f1f] md:pr-5"
@@ -477,6 +495,12 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
                 transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
               }}
             >
+              <FontFamilyDropdown
+                fonts={catalog.fonts}
+                selectedIndex={selected}
+                onSelect={setSelected}
+              />
+
               {styleOptions.length > 1 ? (
                 <AnimatedSelect
                   label="Style"
@@ -547,31 +571,6 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
                 onChange={setLetterSpacingEm}
                 suffix="em"
               />
-
-              <div>
-                <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-[#5a5a5a]">
-                  Alignment
-                </span>
-                <div className="mt-2 grid grid-cols-4 gap-1">
-                  {alignments.map(({ key, label }) => (
-                    <motion.button
-                      key={key}
-                      type="button"
-                      onClick={() => setTextAlign(key)}
-                      className={`px-1 py-2 font-mono text-[9px] uppercase tracking-[0.1em] ring-1 transition-colors ${
-                        textAlign === key
-                          ? "bg-[rgba(75,156,211,0.14)] text-[#e0ded9] ring-[#4b9cd3]"
-                          : "bg-[rgba(42,42,46,0.4)] text-[#8a8a8a] ring-[#2a2a2e] hover:ring-[#3a3a40]"
-                      }`}
-                      whileTap={{ scale: 0.97 }}
-                      transition={{ duration: 0.18, ease: N2_EASE }}
-                      title={label}
-                    >
-                      {label.slice(0, 1)}
-                    </motion.button>
-                  ))}
-                </div>
-              </div>
             </div>
           </motion.aside>
 
@@ -593,7 +592,6 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
                 fontSize: `${fontSizePx}px`,
                 lineHeight,
                 letterSpacing: `${letterSpacingEm}em`,
-                textAlign,
               }}
               spellCheck={false}
               value={text}
