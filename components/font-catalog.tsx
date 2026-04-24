@@ -1,12 +1,106 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+} from "framer-motion";
+import type { ReactNode } from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { N2Background } from "@/components/portable/n2-background";
 import { N2Nav, type N2NavLink } from "@/components/portable/n2-nav";
 
 const N2_EASE = [0.22, 1, 0.36, 1] as const;
+
+/** Dropdown panel: quick fade + slight lift; rows stagger in (tighter than section stagger). */
+const dropdownListVariants = {
+  hidden: { opacity: 0, y: -5 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.22,
+      ease: N2_EASE,
+      staggerChildren: 0.026,
+      delayChildren: 0.02,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -4,
+    transition: { duration: 0.15, ease: N2_EASE },
+  },
+} as const;
+
+const dropdownRowVariants = {
+  hidden: { opacity: 0, x: -6 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.2, ease: N2_EASE },
+  },
+} as const;
+
+/** Shared chrome for catalog controls (N2 gallery–adjacent: quiet borders, accent focus) */
+/** Gallery-1–style section titles (project / thesis blocks), scaled for the narrow column */
+const settingsSectionTitle =
+  "mb-4 font-sans text-[clamp(1.35rem,3.6vw,2.125rem)] font-semibold uppercase leading-[1.05] tracking-[0.02em] text-[#f4f2ee] antialiased";
+const settingsFieldLabel =
+  "font-mono text-[10px] uppercase tracking-[0.15em] text-[#6f6f6f]";
+const settingsControlBase =
+  "flex w-full items-center justify-between gap-2 border border-[#2a2a2e] bg-[rgba(18,18,20,0.72)] px-3 py-3 text-left transition-[border-color,background-color] duration-200 hover:border-[#3a3a3e] hover:bg-[rgba(22,22,26,0.82)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#4b9cd3]/45";
+const settingsList =
+  "absolute left-0 right-0 top-full z-30 mt-px max-h-[min(18rem,52vh)] overflow-y-auto overscroll-contain border border-[#2a2a2e] bg-[rgba(14,14,16,0.97)] py-1 shadow-[0_16px_48px_rgba(0,0,0,0.5)] backdrop-blur-md";
+
+function SettingsGroup({
+  title,
+  groupIndex,
+  children,
+}: {
+  title: string;
+  /** Stagger offset between Font (0) and Measure (1) blocks */
+  groupIndex: number;
+  children: ReactNode;
+}) {
+  const reduce = useReducedMotion();
+  const titleDelay = reduce ? 0 : 0.06 + groupIndex * 0.14;
+  const bodyDelay = reduce ? 0 : titleDelay + 0.1;
+
+  return (
+    <div className="border-b border-[#1f1f1f] pb-6 last:border-b-0 last:pb-0">
+      <motion.h2
+        className={settingsSectionTitle}
+        initial={reduce ? undefined : { opacity: 0, y: 12 }}
+        animate={reduce ? undefined : { opacity: 1, y: 0 }}
+        transition={{ duration: reduce ? 0 : 0.36, delay: titleDelay, ease: N2_EASE }}
+      >
+        {title}
+      </motion.h2>
+      <motion.div
+        className="flex flex-col gap-5"
+        initial={reduce ? undefined : { opacity: 0, y: 8 }}
+        animate={reduce ? undefined : { opacity: 1, y: 0 }}
+        transition={{ duration: reduce ? 0 : 0.34, delay: bodyDelay, ease: N2_EASE }}
+      >
+        {children}
+      </motion.div>
+    </div>
+  );
+}
+
+function useEscapeClose(open: boolean, onClose: () => void) {
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+  useEffect(() => {
+    if (!open) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") onCloseRef.current();
+    }
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
+}
 
 export type FontVariant = {
   file: string;
@@ -108,6 +202,7 @@ function RangeField({
   value,
   onChange,
   suffix,
+  formatDisplay,
 }: {
   label: string;
   min: number;
@@ -116,20 +211,27 @@ function RangeField({
   value: number;
   onChange: (n: number) => void;
   suffix?: string;
+  formatDisplay?: (v: number) => string;
 }) {
+  const reduce = useReducedMotion();
   const span = max - min;
   const pct = span <= 0 ? 0 : Math.min(100, Math.max(0, ((value - min) / span) * 100));
+  const shown = formatDisplay ? formatDisplay(value) : String(value);
+  const readout = `${shown}${suffix ?? ""}`;
 
   return (
     <div>
-      <div className="flex items-baseline justify-between gap-2">
-        <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-[#5a5a5a]">
-          {label}
-        </span>
-        <span className="font-mono text-[10px] tabular-nums text-[#7a7a7a]">
-          {value}
-          {suffix ?? ""}
-        </span>
+      <div className="flex items-baseline justify-between gap-3">
+        <span className={settingsFieldLabel}>{label}</span>
+        <motion.span
+          key={readout}
+          className="inline-block font-mono text-[10px] tabular-nums text-[#9a9a96]"
+          initial={reduce ? undefined : { opacity: 0.45, y: 2 }}
+          animate={reduce ? undefined : { opacity: 1, y: 0 }}
+          transition={{ duration: reduce ? 0 : 0.22, ease: N2_EASE }}
+        >
+          {readout}
+        </motion.span>
       </div>
       <input
         type="range"
@@ -138,7 +240,8 @@ function RangeField({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="font-catalog-range mt-2"
+        aria-label={label}
+        className="font-catalog-range mt-3 w-full"
         style={{
           background: `linear-gradient(to right, rgba(255,255,255,0.6) ${pct}%, rgba(255,255,255,0.25) ${pct}%)`,
         }}
@@ -160,36 +263,49 @@ function AnimatedSelect<T extends string | number>({
   onChange: (v: T) => void;
   format: (v: T) => string;
 }) {
+  const reduce = useReducedMotion();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const close = () => setOpen(false);
+  const selectId = `select-${label.replace(/\s+/g, "-").toLowerCase()}`;
 
   useEffect(() => {
     function onDoc(e: MouseEvent) {
-      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+      if (!ref.current?.contains(e.target as Node)) close();
     }
     document.addEventListener("mousedown", onDoc);
     return () => document.removeEventListener("mousedown", onDoc);
   }, []);
 
+  useEscapeClose(open, close);
+
   return (
     <div className="relative" ref={ref}>
-      <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-[#5a5a5a]">
-        {label}
-      </span>
+      <span className={settingsFieldLabel}>{label}</span>
       <motion.button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="mt-1 flex w-full items-center justify-between gap-2 bg-[rgba(42,42,46,0.55)] px-3 py-2.5 text-left text-[13px] text-[#c4c2be] outline-none ring-1 ring-[#2a2a2e] transition-[box-shadow] hover:ring-[#3a3a40] focus-visible:ring-[#4b9cd3]"
+        className={`mt-2 ${settingsControlBase} text-[13px] text-[#e0ded9]`}
         whileTap={{ scale: 0.995 }}
-        transition={{ duration: 0.2, ease: N2_EASE }}
+        whileHover={reduce ? undefined : { scale: 1.004 }}
+        transition={{ duration: 0.18, ease: N2_EASE }}
         aria-expanded={open}
         aria-haspopup="listbox"
+        id={selectId}
       >
-        <span className="min-w-0 truncate">{format(value)}</span>
+        <motion.span
+          className="min-w-0 truncate"
+          key={String(value)}
+          initial={reduce ? undefined : { opacity: 0.65 }}
+          animate={reduce ? undefined : { opacity: 1 }}
+          transition={{ duration: 0.2, ease: N2_EASE }}
+        >
+          {format(value)}
+        </motion.span>
         <motion.span
           animate={{ rotate: open ? 180 : 0 }}
-          transition={{ duration: 0.28, ease: N2_EASE }}
-          className="shrink-0 text-[#6b6b6b]"
+          transition={{ duration: 0.26, ease: N2_EASE }}
+          className="shrink-0 text-[#5c5c5c]"
           aria-hidden
         >
           ▾
@@ -199,29 +315,35 @@ function AnimatedSelect<T extends string | number>({
         {open ? (
           <motion.ul
             role="listbox"
-            initial={{ opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.22, ease: N2_EASE }}
-            className="absolute left-0 right-0 top-full z-30 mt-1 max-h-52 overflow-y-auto bg-[rgba(18,18,20,0.96)] py-1 shadow-[0_12px_40px_rgba(0,0,0,0.45)] ring-1 ring-[#2a2a2e] backdrop-blur-md"
+            variants={!reduce ? dropdownListVariants : undefined}
+            initial={reduce ? { opacity: 1, y: 0 } : "hidden"}
+            animate={reduce ? { opacity: 1, y: 0 } : "show"}
+            exit={reduce ? { opacity: 0, transition: { duration: 0.12 } } : "exit"}
+            className={settingsList}
+            aria-labelledby={selectId}
           >
             {options.map((opt) => (
-              <li key={String(opt)} role="option" aria-selected={opt === value}>
+              <motion.li
+                key={String(opt)}
+                role="option"
+                aria-selected={opt === value}
+                variants={!reduce ? dropdownRowVariants : undefined}
+              >
                 <button
                   type="button"
-                  className={`w-full px-3 py-2 text-left text-[13px] transition-colors ${
+                  className={`w-full border-l-2 py-3 pl-3 pr-3 text-left text-[13px] transition-colors ${
                     opt === value
-                      ? "bg-[rgba(75,156,211,0.12)] text-[#e0ded9]"
-                      : "text-[#a8a8a8] hover:bg-[rgba(255,255,255,0.04)]"
+                      ? "border-[#4b9cd3] bg-[rgba(75,156,211,0.1)] text-[#f4f2ee]"
+                      : "border-transparent text-[#a8a8a8] hover:bg-[rgba(255,255,255,0.04)]"
                   }`}
                   onClick={() => {
                     onChange(opt);
-                    setOpen(false);
+                    close();
                   }}
                 >
                   {format(opt)}
                 </button>
-              </li>
+              </motion.li>
             ))}
           </motion.ul>
         ) : null}
@@ -242,51 +364,65 @@ function FontFamilyDropdown({
   selectedIndex: number;
   onSelect: (i: number) => void;
 }) {
+  const reduce = useReducedMotion();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const current = fonts[selectedIndex] ?? fonts[0];
+  const close = () => setOpen(false);
 
   useEffect(() => {
     function onDoc(e: MouseEvent) {
-      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+      if (!ref.current?.contains(e.target as Node)) close();
     }
     document.addEventListener("mousedown", onDoc);
     return () => document.removeEventListener("mousedown", onDoc);
   }, []);
 
+  useEscapeClose(open, close);
+
   return (
     <div className="relative" ref={ref}>
-      <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-[#5a5a5a]">
-        Family
-      </span>
+      <span className={settingsFieldLabel}>Family</span>
       <motion.button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="mt-1 flex w-full items-center justify-between gap-2 bg-[rgba(42,42,46,0.55)] px-3 py-2.5 text-left outline-none ring-1 ring-[#2a2a2e] transition-[box-shadow] hover:ring-[#3a3a40] focus-visible:ring-[#4b9cd3]"
+        className={`mt-2 ${settingsControlBase} items-start gap-3`}
         whileTap={{ scale: 0.995 }}
-        transition={{ duration: 0.2, ease: N2_EASE }}
+        whileHover={reduce ? undefined : { scale: 1.004 }}
+        transition={{ duration: 0.18, ease: N2_EASE }}
         aria-expanded={open}
         aria-haspopup="listbox"
+        id="font-family-select"
       >
-        <span className="flex min-w-0 flex-1 flex-col items-start gap-0.5 text-left">
-          <span className="truncate font-mono text-[12px] uppercase tracking-[0.12em] text-[#5a5a5a]">
+        <span className="flex min-w-0 flex-1 flex-col items-start gap-1 text-left">
+          <motion.span
+            key={current?.id ?? "x"}
+            className="truncate font-mono text-[12px] uppercase tracking-[0.12em] text-[#8a8a8a]"
+            initial={reduce ? undefined : { opacity: 0.5, y: 3 }}
+            animate={reduce ? undefined : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.24, ease: N2_EASE }}
+          >
             {current?.family ?? "—"}
-          </span>
-          <span
-            className="block w-full truncate text-[1.05rem] leading-none text-[#c4c2be]"
+          </motion.span>
+          <motion.span
+            key={`${current?.id ?? "x"}-prev`}
+            className="block w-full truncate text-[1.08rem] leading-none text-[#e8e6e1]"
             style={{
               fontFamily: current
                 ? `${JSON.stringify(current.family)}, serif`
                 : "serif",
             }}
+            initial={reduce ? undefined : { opacity: 0.55, y: 4 }}
+            animate={reduce ? undefined : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.28, ease: N2_EASE }}
           >
             {PREVIEW_SNIP}
-          </span>
+          </motion.span>
         </span>
         <motion.span
           animate={{ rotate: open ? 180 : 0 }}
-          transition={{ duration: 0.28, ease: N2_EASE }}
-          className="shrink-0 self-start pt-1 text-[#6b6b6b]"
+          transition={{ duration: 0.26, ease: N2_EASE }}
+          className="shrink-0 self-center text-[#5c5c5c]"
           aria-hidden
         >
           ▾
@@ -296,31 +432,37 @@ function FontFamilyDropdown({
         {open ? (
           <motion.ul
             role="listbox"
-            initial={{ opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.22, ease: N2_EASE }}
-            className="absolute left-0 right-0 top-full z-30 mt-1 max-h-64 overflow-y-auto bg-[rgba(18,18,20,0.96)] py-1 shadow-[0_12px_40px_rgba(0,0,0,0.45)] ring-1 ring-[#2a2a2e] backdrop-blur-md"
+            aria-labelledby="font-family-select"
+            variants={!reduce ? dropdownListVariants : undefined}
+            initial={reduce ? { opacity: 1, y: 0 } : "hidden"}
+            animate={reduce ? { opacity: 1, y: 0 } : "show"}
+            exit={reduce ? { opacity: 0, transition: { duration: 0.12 } } : "exit"}
+            className={settingsList}
           >
             {fonts.map((f, i) => (
-              <li key={f.id} role="option" aria-selected={i === selectedIndex}>
+              <motion.li
+                key={f.id}
+                role="option"
+                aria-selected={i === selectedIndex}
+                variants={!reduce ? dropdownRowVariants : undefined}
+              >
                 <button
                   type="button"
-                  className={`w-full px-3 py-2.5 text-left transition-colors ${
+                  className={`w-full border-l-2 py-3 pl-3 pr-3 text-left transition-colors ${
                     i === selectedIndex
-                      ? "bg-[rgba(75,156,211,0.12)]"
-                      : "hover:bg-[rgba(255,255,255,0.04)]"
+                      ? "border-[#4b9cd3] bg-[rgba(75,156,211,0.08)]"
+                      : "border-transparent hover:bg-[rgba(255,255,255,0.04)]"
                   }`}
                   onClick={() => {
                     onSelect(i);
-                    setOpen(false);
+                    close();
                   }}
                 >
-                  <span className="block truncate font-mono text-[12px] uppercase tracking-[0.12em] text-[#5a5a5a]">
+                  <span className="block truncate font-mono text-[12px] uppercase tracking-[0.12em] text-[#8a8a8a]">
                     {f.family}
                   </span>
                   <span
-                    className="mt-0.5 block truncate text-[1.05rem] leading-none text-[#c4c2be]"
+                    className="mt-1 block truncate text-[1.08rem] leading-none text-[#e8e6e1]"
                     style={{
                       fontFamily: `${JSON.stringify(f.family)}, serif`,
                     }}
@@ -328,7 +470,7 @@ function FontFamilyDropdown({
                     {PREVIEW_SNIP}
                   </span>
                 </button>
-              </li>
+              </motion.li>
             ))}
           </motion.ul>
         ) : null}
@@ -349,7 +491,6 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
   );
 
   const [selected, setSelected] = useState(0);
-  const [typoOpen, setTypoOpen] = useState(true);
   const [text, setText] = useState(SAMPLE);
   const [selectedStyle, setSelectedStyle] = useState<string>("normal");
   const [weightNum, setWeightNum] = useState(400);
@@ -427,11 +568,8 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
     [current, selectedStyle],
   );
 
-  const typoShellClass =
-    "scrollbar-thin space-y-5 overflow-x-hidden overflow-y-auto md:max-h-[calc(100vh-11rem)] " +
-    (typoOpen
-      ? "max-md:max-h-[min(68vh,520px)] max-md:opacity-100"
-      : "max-md:max-h-0 max-md:overflow-hidden max-md:opacity-0 max-md:pointer-events-none");
+  const typoPanelClass =
+    "scrollbar-thin flex max-h-[min(65vh,520px)] flex-col gap-8 overflow-x-hidden overflow-y-auto pr-0.5 md:max-h-[calc(100vh-11rem)]";
 
   return (
     <div className="relative min-h-screen bg-[#0a0a0a] text-[#9a9a9a]">
@@ -461,118 +599,92 @@ export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
         }}
       >
         <main className="flex min-h-0 min-w-0 flex-1 flex-col gap-3 md:flex-row md:gap-0">
-          <motion.aside
-            layout
-            className="flex w-full shrink-0 flex-col md:mb-0 md:w-[min(100%,248px)] md:border-r md:border-[#1f1f1f] md:pr-5"
-            transition={{ duration: 0.35, ease: N2_EASE }}
-          >
-            <motion.button
-              type="button"
-              onClick={() => setTypoOpen((o) => !o)}
-              className="flex w-full items-center justify-between py-2 text-left md:pointer-events-none md:py-3"
-              aria-expanded={typoOpen}
-              whileTap={{ scale: 0.995 }}
-              transition={{ duration: 0.2, ease: N2_EASE }}
-            >
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#6b6b6b]">
-                Type settings
-              </span>
-              <motion.span
-                animate={{ rotate: typoOpen ? 180 : 0 }}
-                transition={{ duration: 0.3, ease: N2_EASE }}
-                className="text-[#6b6b6b] md:hidden"
-                aria-hidden
-              >
-                ▾
-              </motion.span>
-            </motion.button>
-
-            <div
-              className={typoShellClass}
-              style={{
-                transitionProperty: "max-height, opacity",
-                transitionDuration: "0.34s",
-                transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
-              }}
-            >
-              <FontFamilyDropdown
-                fonts={catalog.fonts}
-                selectedIndex={selected}
-                onSelect={setSelected}
-              />
-
-              {styleOptions.length > 1 ? (
-                <AnimatedSelect
-                  label="Style"
-                  value={selectedStyle}
-                  options={styleOptions}
-                  onChange={setSelectedStyle}
-                  format={styleMenuLabel}
+          <aside className="flex w-full shrink-0 flex-col md:mb-0 md:w-[min(100%,288px)] md:pr-6">
+            <div className={typoPanelClass}>
+              <SettingsGroup title="Font" groupIndex={0}>
+                <FontFamilyDropdown
+                  fonts={catalog.fonts}
+                  selectedIndex={selected}
+                  onSelect={setSelected}
                 />
-              ) : null}
 
-              {variableRange ? (
+                {styleOptions.length > 1 ? (
+                  <AnimatedSelect
+                    label="Style"
+                    value={selectedStyle}
+                    options={styleOptions}
+                    onChange={setSelectedStyle}
+                    format={styleMenuLabel}
+                  />
+                ) : null}
+
+                {variableRange ? (
+                  <RangeField
+                    label="Weight"
+                    min={variableRange[0]}
+                    max={variableRange[1]}
+                    step={1}
+                    value={weightNum}
+                    onChange={setWeightNum}
+                  />
+                ) : discreteWeights.length > 1 ? (
+                  <AnimatedSelect
+                    label="Weight"
+                    value={
+                      discreteWeights.includes(weightNum)
+                        ? weightNum
+                        : discreteWeights[0]
+                    }
+                    options={discreteWeights}
+                    onChange={setWeightNum}
+                    format={weightMenuLabel}
+                  />
+                ) : discreteWeights.length === 1 ? (
+                  <div>
+                    <span className={settingsFieldLabel}>Weight</span>
+                    <div
+                      className={`mt-2 ${settingsControlBase} cursor-default text-[13px] text-[#b8b8b4]`}
+                    >
+                      {weightMenuLabel(discreteWeights[0])}
+                    </div>
+                  </div>
+                ) : null}
+              </SettingsGroup>
+
+              <SettingsGroup title="Measure" groupIndex={1}>
                 <RangeField
-                  label="Weight"
-                  min={variableRange[0]}
-                  max={variableRange[1]}
+                  label="Size"
+                  min={10}
+                  max={96}
                   step={1}
-                  value={weightNum}
-                  onChange={setWeightNum}
+                  value={fontSizePx}
+                  onChange={setFontSizePx}
+                  suffix=" px"
                 />
-              ) : discreteWeights.length > 1 ? (
-                <AnimatedSelect
-                  label="Weight"
-                  value={
-                    discreteWeights.includes(weightNum)
-                      ? weightNum
-                      : discreteWeights[0]
-                  }
-                  options={discreteWeights}
-                  onChange={setWeightNum}
-                  format={weightMenuLabel}
+
+                <RangeField
+                  label="Line height"
+                  min={1}
+                  max={2.4}
+                  step={0.01}
+                  value={lineHeight}
+                  onChange={setLineHeight}
+                  formatDisplay={(v) => String(Math.round(v * 100) / 100)}
                 />
-              ) : discreteWeights.length === 1 ? (
-                <div>
-                  <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-[#5a5a5a]">
-                    Weight
-                  </span>
-                  <p className="mt-1 text-[13px] text-[#9a9a9a]">
-                    {weightMenuLabel(discreteWeights[0])}
-                  </p>
-                </div>
-              ) : null}
 
-              <RangeField
-                label="Size"
-                min={10}
-                max={96}
-                step={1}
-                value={fontSizePx}
-                onChange={setFontSizePx}
-                suffix="px"
-              />
-
-              <RangeField
-                label="Line height"
-                min={1}
-                max={2.4}
-                step={0.01}
-                value={lineHeight}
-                onChange={setLineHeight}
-              />
-
-              <RangeField
-                label="Letter spacing"
-                min={-0.08}
-                max={0.35}
-                step={0.005}
-                value={letterSpacingEm}
-                onChange={setLetterSpacingEm}
-                suffix="em"
-              />
+                <RangeField
+                  label="Tracking"
+                  min={-0.08}
+                  max={0.35}
+                  step={0.005}
+                  value={letterSpacingEm}
+                  onChange={setLetterSpacingEm}
+                  suffix=" em"
+                  formatDisplay={(v) => String(Math.round(v * 1000) / 1000)}
+                />
+              </SettingsGroup>
             </div>
-          </motion.aside>
+          </aside>
 
           <motion.div
             key={current?.id ?? "x"}
