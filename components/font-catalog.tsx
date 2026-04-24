@@ -406,7 +406,7 @@ function FontFamilyDropdown({
           </motion.span>
           <motion.span
             key={`${current?.id ?? "x"}-prev`}
-            className="block w-full truncate text-[1.08rem] leading-none text-[#e8e6e1]"
+            className="block w-full truncate pb-0.5 text-[1.08rem] leading-[1.22] text-[#e8e6e1]"
             style={{
               fontFamily: current
                 ? `${JSON.stringify(current.family)}, serif`
@@ -462,7 +462,7 @@ function FontFamilyDropdown({
                     {f.family}
                   </span>
                   <span
-                    className="mt-1 block truncate text-[1.08rem] leading-none text-[#e8e6e1]"
+                    className="mt-1 block truncate pb-0.5 text-[1.08rem] leading-[1.22] text-[#e8e6e1]"
                     style={{
                       fontFamily: `${JSON.stringify(f.family)}, serif`,
                     }}
