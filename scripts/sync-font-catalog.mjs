@@ -6,6 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const fontsDir = path.join(root, "fonts");
 const jsonPath = path.join(root, "fonts.json");
+const libJsonPath = path.join(root, "lib", "fonts.json");
 
 const DISPLAY_NAMES = {
   "pp-neue-montreal": "PP Neue Montreal",
@@ -82,5 +83,8 @@ for (const id of diskDirs) {
 }
 
 const merged = [...byId.values()].sort((a, b) => a.family.localeCompare(b.family));
-fs.writeFileSync(jsonPath, JSON.stringify({ fonts: merged }, null, 2) + "\n");
-console.log("fonts.json:", merged.length, "families");
+const out = JSON.stringify({ fonts: merged }, null, 2) + "\n";
+fs.writeFileSync(jsonPath, out);
+fs.mkdirSync(path.dirname(libJsonPath), { recursive: true });
+fs.writeFileSync(libJsonPath, out);
+console.log("fonts.json + lib/fonts.json:", merged.length, "families");

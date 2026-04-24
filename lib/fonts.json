@@ -1,0 +1,2363 @@
+{
+  "fonts": [
+    {
+      "family": "Apercu Mono",
+      "id": "apercu-mono",
+      "variants": [
+        {
+          "file": "fonts/apercu-mono/ApercuMonoPro-Light.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/apercu-mono/ApercuMonoPro-Regular.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/apercu-mono/ApercuMonoPro-Medium.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/apercu-mono/ApercuMonoPro-Bold.ttf",
+          "weight": 700,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Author",
+      "id": "author",
+      "variants": [
+        {
+          "file": "fonts/author/Author-Extralight.woff2",
+          "weight": 200,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/author/Author-Light.woff2",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/author/Author-Regular.woff2",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/author/Author-Medium.woff2",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/author/Author-Semibold.woff2",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/author/Author-Bold.woff2",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/author/Author-Variable.woff2",
+          "weight": "100 900",
+          "style": "normal",
+          "variable": true
+        },
+        {
+          "file": "fonts/author/Author-ExtralightItalic.woff2",
+          "weight": 200,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/author/Author-LightItalic.woff2",
+          "weight": 300,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/author/Author-Italic.woff2",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/author/Author-MediumItalic.woff2",
+          "weight": 500,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/author/Author-SemiboldItalic.woff2",
+          "weight": 600,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/author/Author-BoldItalic.woff2",
+          "weight": 700,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/author/Author-VariableItalic.woff2",
+          "weight": "100 900",
+          "style": "italic",
+          "variable": true
+        }
+      ]
+    },
+    {
+      "family": "Aux Mono",
+      "id": "aux-mono",
+      "variants": [
+        {
+          "file": "fonts/aux-mono/Aux Mono.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/aux-mono/Aux Mono.ttf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Borgen",
+      "id": "borgen",
+      "variants": [
+        {
+          "file": "fonts/borgen/Borgen.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/borgen/BorgenOblique.otf",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/borgen/BorgenBold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/borgen/BorgenBoldOblique.otf",
+          "weight": 700,
+          "style": "italic"
+        }
+      ]
+    },
+    {
+      "family": "Botanica",
+      "id": "botanica",
+      "variants": [
+        {
+          "file": "fonts/botanica/botanica.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/botanica/botanica.otf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Britanica Black",
+      "id": "britanica-black",
+      "variants": [
+        {
+          "file": "fonts/britanica-black/britanica-black.ttf",
+          "weight": 900,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Brunson",
+      "id": "brunson",
+      "variants": [
+        {
+          "file": "fonts/brunson/Brunson.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/brunson/Brunson Rough.ttf",
+          "weight": 400,
+          "style": "normal",
+          "variant": "rough"
+        }
+      ]
+    },
+    {
+      "family": "Cabinet Grotesk",
+      "id": "cabinet-grotesk",
+      "variants": [
+        {
+          "file": "fonts/cabinet-grotesk/CabinetGrotesk-Thin.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/cabinet-grotesk/CabinetGrotesk-Extralight.otf",
+          "weight": 200,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/cabinet-grotesk/CabinetGrotesk-Light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/cabinet-grotesk/CabinetGrotesk-Regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/cabinet-grotesk/CabinetGrotesk-Medium.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/cabinet-grotesk/CabinetGrotesk-Bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/cabinet-grotesk/CabinetGrotesk-Extrabold.otf",
+          "weight": 800,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/cabinet-grotesk/CabinetGrotesk-Black.otf",
+          "weight": 900,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Clash Display",
+      "id": "clash-display",
+      "variants": [
+        {
+          "file": "fonts/clash-display/ClashDisplay-Variable.woff2",
+          "weight": "100 900",
+          "style": "normal",
+          "variable": true
+        },
+        {
+          "file": "fonts/clash-display/ClashDisplay-Extralight.woff2",
+          "weight": 200,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/clash-display/ClashDisplay-Light.woff2",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/clash-display/ClashDisplay-Regular.woff2",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/clash-display/ClashDisplay-Medium.woff2",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/clash-display/ClashDisplay-Semibold.woff2",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/clash-display/ClashDisplay-Bold.woff2",
+          "weight": 700,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Commune",
+      "id": "commune",
+      "variants": [
+        {
+          "file": "fonts/commune/Commune.ttf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Duke Plus",
+      "id": "duke-plus",
+      "variants": [
+        {
+          "file": "fonts/duke-plus/DUKEPLUS.ttf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Eingrantch Mono",
+      "id": "eingrantch-mono",
+      "variants": [
+        {
+          "file": "fonts/eingrantch-mono/EingrantchMono-Medium.ttf",
+          "weight": 500,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Elron Mono",
+      "id": "elron-mono",
+      "variants": [
+        {
+          "file": "fonts/elron-mono/Elronmonospace.ttf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "FH Lecturis",
+      "id": "fh-lecturis",
+      "variants": [
+        {
+          "file": "fonts/fh-lecturis/fhlecturisroundedtest-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/fh-lecturis/fhlecturisroundedtest-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/fh-lecturis/fhlecturisroundedtest-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/fh-lecturis/fhlecturistest-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/fh-lecturis/fhlecturistest-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/fh-lecturis/fhlecturistest-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Fira Mono",
+      "id": "fira-mono",
+      "variants": [
+        {
+          "file": "fonts/fira-mono/FiraMono-Regular.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/fira-mono/FiraMono-Medium.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/fira-mono/FiraMono-Bold.ttf",
+          "weight": 700,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Fragment Mono",
+      "id": "fragment-mono",
+      "variants": [
+        {
+          "file": "fonts/fragment-mono/FragmentMono-Italic.woff2",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/fragment-mono/FragmentMono-Regular.woff2",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Freight Big",
+      "id": "freight-big",
+      "variants": [
+        {
+          "file": "fonts/freight-big/FreightBigPro-Light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/freight-big/FreightBigPro-Book.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/freight-big/FreightBigPro-LightItalic.otf",
+          "weight": 300,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/freight-big/FreightBigPro-BookItalic.otf",
+          "weight": 400,
+          "style": "italic"
+        }
+      ]
+    },
+    {
+      "family": "ID Grotesk",
+      "id": "id-grotesk",
+      "variants": [
+        {
+          "file": "fonts/id-grotesk/IDGrotesk-Bold-BF652cb1b4740d2.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/id-grotesk/IDGrotesk-Book-BF652cb1b45dae8.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/id-grotesk/IDGrotesk-Light-BF652cb1b459bdf.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/id-grotesk/IDGrotesk-Medium-BF652cb1b4765e1.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/id-grotesk/IDGrotesk-Regular-BF652cb1b4787d7.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/id-grotesk/IDGrotesk-Semibold-BF652cb1b467d9d.ttf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/id-grotesk/IDGrotesk-Thin-BF652cb1b461e9c.ttf",
+          "weight": 100,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "II Vorkurs",
+      "id": "iivorkurs",
+      "variants": [
+        {
+          "file": "fonts/iivorkurs/II Vorkurs Bold Oblique.ttf",
+          "weight": 700,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/iivorkurs/II Vorkurs Bold.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/iivorkurs/II Vorkurs Light Oblique.ttf",
+          "weight": 300,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/iivorkurs/II Vorkurs Light.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/iivorkurs/II Vorkurs Medium Oblique.ttf",
+          "weight": 500,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/iivorkurs/II Vorkurs Medium.ttf",
+          "weight": 500,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Kurdis",
+      "id": "kurdis",
+      "variants": [
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-Black-BF64bf41dfa220b.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-Bold-BF64bf41dfbff9f.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-Condensed-BF64bf41dfe7ff5.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-CondensedBlack-BF64bf41dfeff24.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-CondensedBold-BF64bf41e1775d6.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-CondensedExtraBold-BF64bf41e17d630.otf",
+          "weight": 800,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-CondensedSemiBold-BF64bf41e17f43b.otf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraBold-BF64bf41e03dd58.otf",
+          "weight": 800,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraCondensed-BF64bf41e088fea.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraCondensedBlack-BF64bf41e074e50.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraCondensedBold-BF64bf41e0cc586.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraCondensedExtraBold-BF64bf41e05c114.otf",
+          "weight": 800,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraCondensedSemiBold-BF64bf41e09180b.otf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraWide-BF64bf41e10ac46.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraWideBlack-BF64bf41e0bdc0c.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraWideBold-BF64bf41e1032f4.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraWideExtraBold-BF64bf41e13a4b4.otf",
+          "weight": 800,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-ExtraWideSemiBold-BF64bf41e0e4ce5.otf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-Regular-BF64bf41e12455a.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-SemiBold-BF64bf41e14db3c.otf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-SemiCondensed-BF64bf41e13211f.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-SemiCondensedBlack-BF64bf41e15820a.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-SemiCondensedBold-BF64bf41e168d70.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-SemiCondensedExtraBold-BF64bf41e15802c.otf",
+          "weight": 800,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-SemiCondensedSemiBold-BF64bf41e175379.otf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-Wide-BF64bf41e16a421.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-WideBlack-BF64bf41e184cc4.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-WideBold-BF64bf41e1834a7.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-WideExtraBold-BF64bf41e172be8.otf",
+          "weight": 800,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/kurdis/KurdisVariableFamilyTest-WideSemiBold-BF64bf41e177eb2.otf",
+          "weight": 600,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Manolo Mono",
+      "id": "manolo-mono",
+      "variants": [
+        {
+          "file": "fonts/manolo-mono/manolomono.otf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Melodrama",
+      "id": "melodrama",
+      "variants": [
+        {
+          "file": "fonts/melodrama/Melodrama-Light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/melodrama/Melodrama-Regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/melodrama/Melodrama-Medium.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/melodrama/Melodrama-Semibold.otf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/melodrama/Melodrama-Bold.otf",
+          "weight": 700,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Modernist Milk",
+      "id": "modernist-milk",
+      "variants": [
+        {
+          "file": "fonts/modernist-milk/Modernist-Milk.otf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Monzane",
+      "id": "monzane",
+      "variants": [
+        {
+          "file": "fonts/monzane/new_monzane.otf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Neogrotesk",
+      "id": "neogrotesk",
+      "variants": [
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-blackit.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-boldit.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-lightit.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-regularit.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-ultralight.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskess-ultralightit.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-blackit.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-boldit.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-lightit.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-regularit.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-ultralight.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskessalt-ultralightit.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-blackit.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-boldit.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-lightit.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-regularit.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-ultralight.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogroteskpro-ultralightit.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-blackit.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-boldit.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-lightit.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-regularit.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-ultralight.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk/Fontspring-DEMO-neogrotesksc-ultralightit.otf",
+          "weight": 100,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Neogrotesk Sans",
+      "id": "neogrotesk-sans",
+      "variants": [
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-blackit.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-boldit.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-lightit.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-regularit.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-ultralight.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskess-ultralightit.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-blackit.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-boldit.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-lightit.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-regularit.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-ultralight.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskessalt-ultralightit.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-blackit.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-boldit.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-lightit.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-regularit.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-ultralight.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogroteskpro-ultralightit.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-blackit.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-boldit.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-lightit.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-regularit.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-ultralight.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neogrotesk-sans/Fontspring-DEMO-neogrotesksc-ultralightit.otf",
+          "weight": 100,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Neomatrix Code",
+      "id": "neomatrix-code",
+      "variants": [
+        {
+          "file": "fonts/neomatrix-code/NeomatrixCode.ttf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Neue Haas Display",
+      "id": "neue-haas-display",
+      "variants": [
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayXXThin.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayXXThinItalic.ttf",
+          "weight": 100,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayXThin.ttf",
+          "weight": 200,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayXThinItalic.ttf",
+          "weight": 200,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayThin.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayThinItalic.ttf",
+          "weight": 300,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayRoman.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayRomanItalic.ttf",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayMediu.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayMediumItalic.ttf",
+          "weight": 500,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayBold.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayBoldItalic.ttf",
+          "weight": 700,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayBlack.ttf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/neue-haas-display/NeueHaasDisplayBlackItalic.ttf",
+          "weight": 900,
+          "style": "italic"
+        }
+      ]
+    },
+    {
+      "family": "Northura",
+      "id": "northura",
+      "variants": [
+        {
+          "file": "fonts/northura/northura-black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-black.ttf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-blackexpanded.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-blackexpanded.ttf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-blackextraexpanded.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-blackextraexpanded.ttf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-blacksemiexpanded.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-blacksemiexpanded.ttf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-blackultraexpanded.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-blackultraexpanded.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-bold.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-boldexpanded.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-boldexpanded.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-boldextraexpanded.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-boldextraexpanded.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-boldsemiexpanded.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-boldsemiexpanded.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-boldultraexpanded.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-boldultraexpanded.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-expanded.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-expanded.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-extraexpanded.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-extraexpanded.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-light.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-lightexpanded.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-lightexpanded.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-lightextraexpanded.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-lightextraexpanded.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-lightsemiexpanded.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-lightsemiexpanded.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-lightultraexpanded.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-lightultraexpanded.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-medium.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-medium.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-mediumexpanded.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-mediumexpanded.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-mediumextraexpanded.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-mediumextraexpanded.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-mediumsemiexpanded.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-mediumsemiexpanded.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-mediumultraexpanded.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-mediumultraexpanded.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-regular.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-semiexpanded.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-semiexpanded.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thin.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thin.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thinexpanded.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thinexpanded.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thinextraexpanded.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thinextraexpanded.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thinsemiexpanded.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thinsemiexpanded.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thinultraexpanded.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-thinultraexpanded.ttf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-ultraexpanded.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/northura/northura-ultraexpanded.ttf",
+          "weight": 100,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Overpass Mono",
+      "id": "overpass-mono",
+      "variants": [
+        {
+          "file": "fonts/overpass-mono/OverpassMono-Light.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/overpass-mono/OverpassMono-Regular.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/overpass-mono/OverpassMono-SemiBold.ttf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/overpass-mono/OverpassMono-Bold.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/overpass-mono/OverpassMono[wght].ttf",
+          "weight": "100 900",
+          "style": "normal",
+          "variable": true
+        }
+      ]
+    },
+    {
+      "family": "PP Neue Montreal",
+      "id": "pp-neue-montreal",
+      "variants": [
+        {
+          "file": "fonts/pp-neue-montreal/PPNeueMontreal-Medium.woff",
+          "weight": 500,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Proto Mono",
+      "id": "protomono",
+      "variants": [
+        {
+          "file": "fonts/protomono/Proto Mono Light Shadow.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/protomono/Proto Mono Light.ttf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/protomono/Proto Mono Medium Shadow.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/protomono/Proto Mono Medium.ttf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/protomono/Proto Mono Regular Shadow.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/protomono/Proto Mono Regular.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/protomono/Proto Mono Semi Bold Shadow.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/protomono/Proto Mono Semi Bold.ttf",
+          "weight": 700,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Ranade",
+      "id": "ranade",
+      "variants": [
+        {
+          "file": "fonts/ranade/Ranade-Thin.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/ranade/Ranade-ThinItalic.otf",
+          "weight": 100,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/ranade/Ranade-Light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/ranade/Ranade-LightItalic.otf",
+          "weight": 300,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/ranade/Ranade-Regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/ranade/Ranade-Italic.otf",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/ranade/Ranade-Medium.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/ranade/Ranade-MediumItalic.otf",
+          "weight": 500,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/ranade/Ranade-Bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/ranade/Ranade-BoldItalic.otf",
+          "weight": 700,
+          "style": "italic"
+        }
+      ]
+    },
+    {
+      "family": "Raygun",
+      "id": "raygun",
+      "variants": [
+        {
+          "file": "fonts/raygun/raygun.otf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Redaction",
+      "id": "redaction",
+      "variants": [
+        {
+          "file": "fonts/redaction/Redaction10-1GX2v.otf",
+          "weight": 10,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/redaction/Redaction10Italic-nRYrO.otf",
+          "weight": 10,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/redaction/Redaction10Bold-w1gB6.otf",
+          "weight": 10,
+          "style": "normal",
+          "variant": "bold"
+        },
+        {
+          "file": "fonts/redaction/Redaction20-YzPy2.otf",
+          "weight": 20,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/redaction/Redaction20Italic-K7ZJe.otf",
+          "weight": 20,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/redaction/Redaction20Bold-2ODWX.otf",
+          "weight": 20,
+          "style": "normal",
+          "variant": "bold"
+        },
+        {
+          "file": "fonts/redaction/Redaction35-BWXjw.otf",
+          "weight": 35,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/redaction/Redaction35Italic-rgDrB.otf",
+          "weight": 35,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/redaction/Redaction35Bold-MV3LP.otf",
+          "weight": 35,
+          "style": "normal",
+          "variant": "bold"
+        },
+        {
+          "file": "fonts/redaction/Redaction50-8Mg4n.otf",
+          "weight": 50,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/redaction/Redaction50Italic-2ODWo.otf",
+          "weight": 50,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/redaction/Redaction50Bold-vmXRL.otf",
+          "weight": 50,
+          "style": "normal",
+          "variant": "bold"
+        },
+        {
+          "file": "fonts/redaction/Redaction70-RpXqE.otf",
+          "weight": 70,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/redaction/Redaction70Italic-MV3Lv.otf",
+          "weight": 70,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/redaction/Redaction70Bold-K7ZJX.otf",
+          "weight": 70,
+          "style": "normal",
+          "variant": "bold"
+        },
+        {
+          "file": "fonts/redaction/Redaction100-vmXR9.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/redaction/Redaction100Italic-rgDrK.otf",
+          "weight": 100,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/redaction/Redaction100Bold-7BE64.otf",
+          "weight": 100,
+          "style": "normal",
+          "variant": "bold"
+        },
+        {
+          "file": "fonts/redaction/Redaction-mL8P5.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/redaction/RedactionItalic-lgB8w.otf",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/redaction/RedactionBold-d9yOZ.otf",
+          "weight": 700,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Saans",
+      "id": "saans",
+      "variants": [
+        {
+          "file": "fonts/saans/Saans-Regular.woff2",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/saans/Saans-SemiBold.woff2",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/saans/Saans-Bold.woff2",
+          "weight": 700,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Sage",
+      "id": "sage",
+      "variants": [
+        {
+          "file": "fonts/sage/Sage.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/sage/sage-webfont.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/sage/sage-webfont.woff",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/sage/sage-webfont.woff2",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Salmond",
+      "id": "salmond",
+      "variants": [
+        {
+          "file": "fonts/salmond/SalmondLight.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/salmond/SalmondSemibold.otf",
+          "weight": 600,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Sollarish",
+      "id": "sollarish",
+      "variants": [
+        {
+          "file": "fonts/sollarish/Sollarish-Regular.ttf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Space Mono",
+      "id": "space-mono",
+      "variants": [
+        {
+          "file": "fonts/space-mono/SpaceMono-Regular.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/space-mono/SpaceMono-Italic.ttf",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/space-mono/SpaceMono-Bold.ttf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/space-mono/SpaceMono-BoldItalic.ttf",
+          "weight": 700,
+          "style": "italic"
+        }
+      ]
+    },
+    {
+      "family": "Stoned Youth",
+      "id": "stoned-youth",
+      "variants": [
+        {
+          "file": "fonts/stoned-youth/StonedYouthRegular.ttf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/stoned-youth/StonedYouthRegular.woff",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/stoned-youth/StonedYouthRegular.woff2",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Suika",
+      "id": "suika",
+      "variants": [
+        {
+          "file": "fonts/suika/Suika-DEMO.otf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Sunflora Sans",
+      "id": "sunflora-sans",
+      "variants": [
+        {
+          "file": "fonts/sunflora-sans/sunflora.otf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Svatopluk",
+      "id": "svatopluk",
+      "variants": [
+        {
+          "file": "fonts/svatopluk/Svatopluk-Black-iF67d6f0d9c2423.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-BlackItalic-iF67d6f0d9d18e0.otf",
+          "weight": 900,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-Bold-iF67d6f0d9b5f70.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-BoldItalic-iF67d6f0d9cb39f.otf",
+          "weight": 700,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-Light-iF67d6f0d98142b.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-LightItalic-iF67d6f0d98e9d2.otf",
+          "weight": 300,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-Medium-iF67d6f0d9a273f.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-MediumItalic-iF67d6f0d9a9acb.otf",
+          "weight": 500,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-Regular-iF67d6f0d9954ce.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-RegularItalic-iF67d6f0d99be16.otf",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-SemiBold-iF67d6f0d9afd52.otf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/svatopluk/Svatopluk-SemiBoldItalic-iF67d6f0d9bc165.otf",
+          "weight": 600,
+          "style": "italic"
+        }
+      ]
+    },
+    {
+      "family": "Switzer",
+      "id": "switzer",
+      "variants": [
+        {
+          "file": "fonts/switzer/Switzer-Thin.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/switzer/Switzer-ThinItalic.otf",
+          "weight": 100,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/switzer/Switzer-Extralight.otf",
+          "weight": 200,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/switzer/Switzer-ExtralightItalic.otf",
+          "weight": 200,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/switzer/Switzer-Light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/switzer/Switzer-LightItalic.otf",
+          "weight": 300,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/switzer/Switzer-Regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/switzer/Switzer-Italic.otf",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/switzer/Switzer-Medium.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/switzer/Switzer-MediumItalic.otf",
+          "weight": 500,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/switzer/Switzer-Semibold.otf",
+          "weight": 600,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/switzer/Switzer-SemiboldItalic.otf",
+          "weight": 600,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/switzer/Switzer-Bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/switzer/Switzer-BoldItalic.otf",
+          "weight": 700,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/switzer/Switzer-Extrabold.otf",
+          "weight": 800,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/switzer/Switzer-ExtraboldItalic.otf",
+          "weight": 800,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/switzer/Switzer-Black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/switzer/Switzer-BlackItalic.otf",
+          "weight": 900,
+          "style": "italic"
+        }
+      ]
+    },
+    {
+      "family": "Syne Mono",
+      "id": "syne-mono",
+      "variants": [
+        {
+          "file": "fonts/syne-mono/SyneMono-Regular.ttf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "family": "Test The Future",
+      "id": "test-the-future",
+      "variants": [
+        {
+          "file": "fonts/test-the-future/TestTheFuture--Thin-BF6645817a3698c.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--ThinItalic-BF664581771a1be.otf",
+          "weight": 100,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--Extralight-BF66458176acccb.otf",
+          "weight": 200,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--ExtralightItalic-BF66458179c3383.otf",
+          "weight": 200,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--Light-BF664581769e13b.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--LightItalic-BF66458176e02eb.otf",
+          "weight": 300,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--Regular-BF6645817a3005a.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--Italic-BF66458176db0ed.otf",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--Medium-BF66458176dc698.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--MediumItalic-BF66458176db719.otf",
+          "weight": 500,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--Bold-BF664581770dc3e.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--BoldItalic-BF66458176c4d60.otf",
+          "weight": 700,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--Black-BF66458176b6697.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture--BlackItalic-BF66458176c6c63.otf",
+          "weight": 900,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-Thin-BF6645817ca20e4.otf",
+          "weight": 100,
+          "style": "normal",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-ThinItalic-BF66458177685c1.otf",
+          "weight": 100,
+          "style": "italic",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-Extralight-BF66458175dba12.otf",
+          "weight": 200,
+          "style": "normal",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-ExtralightItalic-BF664581761c565.otf",
+          "weight": 200,
+          "style": "italic",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-Light-BF66458176a5cd8.otf",
+          "weight": 300,
+          "style": "normal",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-LightItalic-BF66458176ddcaf.otf",
+          "weight": 300,
+          "style": "italic",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-Regular-BF664581770acd7.otf",
+          "weight": 400,
+          "style": "normal",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-Italic-BF66458177077c2.otf",
+          "weight": 400,
+          "style": "italic",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-Medium-BF664581772207c.otf",
+          "weight": 500,
+          "style": "normal",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-MediumItalic-BF66458176e0292.otf",
+          "weight": 500,
+          "style": "italic",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-Bold-BF66458176b46d5.otf",
+          "weight": 700,
+          "style": "normal",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-BoldItalic-BF6645817562d89.otf",
+          "weight": 700,
+          "style": "italic",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-Black-BF66458175046b5.otf",
+          "weight": 900,
+          "style": "normal",
+          "variant": "mono"
+        },
+        {
+          "file": "fonts/test-the-future/TestTheFuture-Mono-BlackItalic-BF6645817c9e6ed.otf",
+          "weight": 900,
+          "style": "italic",
+          "variant": "mono"
+        }
+      ]
+    },
+    {
+      "family": "Test The Future Mono",
+      "id": "test-the-future-mono",
+      "variants": [
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-Black.otf",
+          "weight": 900,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-BlackItalic-BF6645817c9e6ed.otf",
+          "weight": 900,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-Bold.otf",
+          "weight": 700,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-BoldItalic-BF6645817562d89.otf",
+          "weight": 700,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-Extralight-BF66458175dba12.otf",
+          "weight": 200,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-ExtralightItalic-BF664581761c565.otf",
+          "weight": 200,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-Italic-BF66458177077c2.otf",
+          "weight": 400,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-Light.otf",
+          "weight": 300,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-LightItalic-BF66458176ddcaf.otf",
+          "weight": 300,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-Medium.otf",
+          "weight": 500,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-MediumItalic-BF66458176e0292.otf",
+          "weight": 500,
+          "style": "italic"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-Regular.otf",
+          "weight": 400,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-Thin.otf",
+          "weight": 100,
+          "style": "normal"
+        },
+        {
+          "file": "fonts/test-the-future-mono/TestTheFuture-Mono-ThinItalic-BF66458177685c1.otf",
+          "weight": 100,
+          "style": "italic"
+        }
+      ]
+    },
+    {
+      "family": "Vactory Sans",
+      "id": "vactory-sans",
+      "variants": [
+        {
+          "file": "fonts/vactory-sans/VactorySansRegular-drrAV.ttf",
+          "weight": 400,
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}
