@@ -1,6 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback, type CSSProperties } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  type AnchorHTMLAttributes,
+  type ComponentType,
+  type CSSProperties,
+} from "react";
+import type Link from "next/link";
 import { N2MobileBottomNavShell } from "@/components/portable/n2-mobile-bottom-nav-shell";
 
 // ============================================================================
@@ -15,6 +24,16 @@ import { N2MobileBottomNavShell } from "@/components/portable/n2-mobile-bottom-n
 // - mix-blend-mode: difference for auto-inversion over any background
 // - Fully typed with TypeScript
 // ============================================================================
+
+/** Next `Link` or `<a>` — `Link` is wider than anchor-only; union keeps call sites typed. */
+type N2NavLinkComponent =
+  | ComponentType<AnchorHTMLAttributes<HTMLAnchorElement>>
+  | typeof Link;
+
+type N2NavLinkAnchorPick = Pick<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  "onMouseEnter" | "onMouseLeave" | "style" | "aria-current"
+> & { href: string };
 
 // -------------------------------------
 // useShuffleText hook (embedded for portability)
@@ -228,7 +247,7 @@ export interface N2NavProps {
   /** Brand label (defaults to "DIGITAL ARCHIVE") */
   brandLabel?: string;
   /** Custom link component (e.g., Next.js Link). Accepts href, children, and standard anchor props. */
-  linkComponent?: React.ComponentType<any>;
+  linkComponent?: N2NavLinkComponent;
   /** Mobile brand name (defaults to "Isiah Udofia") */
   mobileBrandName?: string;
   /** Mobile tagline (defaults to "[Digital Archive]") */
@@ -281,7 +300,7 @@ interface NavLinkProps {
   hoverLabel?: string;
   isActive: boolean;
   textStyle: CSSProperties;
-  linkComponent?: React.ComponentType<any>;
+  linkComponent?: N2NavLinkComponent;
   shuffleOnLoad?: boolean;
 }
 
@@ -300,7 +319,7 @@ function NavLink({ href, label, hoverLabel, isActive, textStyle, linkComponent, 
   const showBrackets = isActive || isHovered;
   const LinkComp = linkComponent ?? "a";
 
-  const linkProps: Record<string, any> = {
+  const linkProps: N2NavLinkAnchorPick = {
     href,
     onMouseEnter: onEnter,
     onMouseLeave: onLeave,
@@ -541,7 +560,7 @@ interface MobileNavLinkProps {
   hoverLabel?: string;
   isActive: boolean;
   textStyle: CSSProperties;
-  linkComponent?: React.ComponentType<any>;
+  linkComponent?: N2NavLinkComponent;
   segmentBorder?: string;
 }
 
@@ -562,7 +581,7 @@ function MobileNavLink({
   const showBrackets = isActive || isHovered;
   const LinkComp = linkComponent ?? "a";
 
-  const linkProps: Record<string, any> = {
+  const linkProps: N2NavLinkAnchorPick = {
     href,
     onMouseEnter: onEnter,
     onMouseLeave: onLeave,

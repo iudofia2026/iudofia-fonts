@@ -9,7 +9,7 @@
     "start": "next start -p 8890",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "production-lint": "npm run typecheck && npm run lint && npm run build"
+    "production-lint": "npm run typecheck && npm run lint && npm run build && npx depcheck --ignores=\"@types/*,eslint-config-next,autoprefixer,postcss,@eslint/eslintrc\""
   },
   "dependencies": {
     "framer-motion": "^11.0.0",
