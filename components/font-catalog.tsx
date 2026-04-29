@@ -481,10 +481,10 @@ function FontFamilyDropdown({
 
 export function FontCatalog({ catalog }: { catalog: FontCatalogData }) {
   const hubBase =
-    process.env.NEXT_PUBLIC_DESIGNHUB_ORIGIN ?? "http://localhost:8888";
+    process.env.NEXT_PUBLIC_DESIGNHUB_ORIGIN ?? "https://design.isiahudofia.com";
   const hubLinks: N2NavLink[] = useMemo(
     () => [
-      { href: `${hubBase}/`, label: "Work", hoverLabel: "WORK" },
+      { href: `${hubBase}/`, label: "Hub", hoverLabel: "HUB" },
       { href: `${hubBase}/lab`, label: "Lab", hoverLabel: "LAB" },
     ],
     [hubBase],

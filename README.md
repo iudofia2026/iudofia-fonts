@@ -5,7 +5,7 @@ Personal font collection and archive.
 ### Next.js catalog
 
 - **Dev:** `npm install` then `npm run dev` (port **8890**). Fonts are served from `public/fonts/`; metadata in `lib/fonts.json` (regenerate with `node scripts/sync-font-catalog.mjs` from the `fonts/` directory).
-- **Designhub links:** set `NEXT_PUBLIC_DESIGNHUB_ORIGIN` in `.env.local` (see `.env.example`) so N2 nav Work/Lab URLs point at your deployment.
+- **Designhub links:** `NEXT_PUBLIC_DESIGNHUB_ORIGIN` (see `.env.example`) defaults to **`https://design.isiahudofia.com`** so N2 nav Hub/Lab point at production; override in `.env.local` for local designhub (e.g. `http://localhost:8888`).
 
 ### Folder structure
 

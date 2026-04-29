@@ -67,7 +67,7 @@ export interface UseShuffleTextReturn {
  * - Text is split into words by whitespace
  * - Each word shuffles independently, all starting at the same time
  * - Each interval tick (50ms), one more character resolves per word
- * - "Work" (1 word, 4 chars) → 4 ticks × 50ms = 200ms
+ * - "Hub" (1 word, 3 chars) → 3 ticks × 50ms = 150ms
  * - "DIGITAL ARCHIVE" (2 words, 7+7 chars) → 7 ticks × 50ms = 350ms
  *
  * On mount: measures both default + hover text with a hidden probe span,
@@ -277,7 +277,7 @@ export interface N2NavProps {
   /**
    * Starting column for nav links (1-indexed). Default: 7.
    * Use to adjust positioning for pages with fewer links.
-   * For 2 links (Work, Lab), use 8 to position at cols 8-9.
+   * For 2 links (Hub, Lab), use 8 to position at cols 8-9.
    */
   linksStartColumn?: number;
   /**
@@ -662,7 +662,7 @@ function MobileNavLink({
  *
  * <N2Nav
  *   links={[
- *     { href: "/work", label: "Work", hoverLabel: "WORK" },
+ *     { href: "/", label: "Hub", hoverLabel: "HUB" },
  *     { href: "/about", label: "About", hoverLabel: "ABOUT" },
  *   ]}
  *   pathname={usePathname()}
